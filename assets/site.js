@@ -49,17 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Mobile Sidebar Drawer toggle
   const menuToggleBtn = document.getElementById('menu-toggle');
   const sidebarAside = document.querySelector('.sidebar-aside');
+  const sidebarBackdrop = document.getElementById('sidebar-backdrop');
 
-  if (menuToggleBtn && sidebarAside) {
+  if (menuToggleBtn && sidebarAside && sidebarBackdrop) {
     menuToggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       sidebarAside.classList.toggle('open');
+      sidebarBackdrop.classList.toggle('open');
     });
     
-    document.addEventListener('click', (e) => {
-      if (!sidebarAside.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+    sidebarBackdrop.addEventListener('click', () => {
+      sidebarAside.classList.remove('open');
+      sidebarBackdrop.classList.remove('open');
+    });
+    
+    // Close sidebar on link clicks
+    sidebarAside.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
         sidebarAside.classList.remove('open');
-      }
+        sidebarBackdrop.classList.remove('open');
+      });
     });
   }
 

@@ -713,10 +713,33 @@ body.pm-bun .code-block-npm, body.pm-bun .code-block-yarn, body.pm-bun .code-blo
   display: none;
 }
 
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 35;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.sidebar-backdrop.open {
+  display: block;
+}
+
 @media (max-width: 900px) {
   .sidebar-aside {
     transform: translateX(-100%);
-    transition: transform 0.25s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  }
+  
+  html.dark .sidebar-aside {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
   }
   
   .sidebar-aside.open {
@@ -734,6 +757,72 @@ body.pm-bun .code-block-npm, body.pm-bun .code-block-yarn, body.pm-bun .code-blo
   
   .header-nav {
     display: none;
+  }
+}
+
+/* Extra mobile refinements for very small screens */
+@media (max-width: 640px) {
+  header {
+    padding: 0 16px;
+  }
+  
+  .version-badge {
+    display: none; /* Hide version badge on very small screens to make room for logo */
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+    letter-spacing: -0.02em;
+  }
+  
+  .page-description {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  
+  .content-main {
+    padding: 24px 16px;
+  }
+  
+  .steps-list {
+    padding-left: 44px;
+  }
+  
+  .steps-list::before {
+    left: 14px;
+    top: 10px;
+  }
+  
+  .step-number {
+    left: -44px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  
+  .step-title {
+    font-size: 1rem;
+  }
+  
+  .step-body {
+    font-size: 0.875rem;
+  }
+  
+  .code-body {
+    padding: 14px;
+  }
+  
+  .code-body pre {
+    font-size: 0.8rem;
+  }
+  
+  .framework-card {
+    padding: 16px;
+  }
+  
+  .frameworks-grid {
+    grid-template-columns: 1fr; /* Single column on small mobile screens */
+    gap: 16px;
   }
 }
 """
@@ -793,17 +882,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Mobile Sidebar Drawer toggle
   const menuToggleBtn = document.getElementById('menu-toggle');
   const sidebarAside = document.querySelector('.sidebar-aside');
+  const sidebarBackdrop = document.getElementById('sidebar-backdrop');
 
-  if (menuToggleBtn && sidebarAside) {
+  if (menuToggleBtn && sidebarAside && sidebarBackdrop) {
     menuToggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       sidebarAside.classList.toggle('open');
+      sidebarBackdrop.classList.toggle('open');
     });
     
-    document.addEventListener('click', (e) => {
-      if (!sidebarAside.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+    sidebarBackdrop.addEventListener('click', () => {
+      sidebarAside.classList.remove('open');
+      sidebarBackdrop.classList.remove('open');
+    });
+    
+    // Close sidebar on link clicks
+    sidebarAside.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
         sidebarAside.classList.remove('open');
-      }
+        sidebarBackdrop.classList.remove('open');
+      });
     });
   }
 
@@ -973,6 +1071,7 @@ def build_guide_html(slug, data):
 </head>
 <body class="pm-npm">
   {generate_header()}
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
   <div class="main-wrapper">
     {generate_sidebar(slug)}
     <main class="content-main">
@@ -1052,6 +1151,7 @@ hub_html = f"""<!DOCTYPE html>
 </head>
 <body class="pm-npm">
   {generate_header()}
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
   <div class="main-wrapper">
     {generate_sidebar("framework-guides")}
     <main class="content-main">
