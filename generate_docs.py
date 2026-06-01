@@ -825,6 +825,31 @@ body.pm-bun .code-block-npm, body.pm-bun .code-block-yarn, body.pm-bun .code-blo
     gap: 16px;
   }
 }
+
+/* SVG Utility classes */
+.w-4 { width: 1rem !important; }
+.h-4 { height: 1rem !important; }
+.w-5 { width: 1.25rem !important; }
+.h-5 { height: 1.25rem !important; }
+.w-6 { width: 1.5rem !important; }
+.h-6 { height: 1.5rem !important; }
+.w-8 { width: 2rem !important; }
+.h-8 { height: 2rem !important; }
+
+/* Color Utilities */
+.text-red-500 { color: #ef4444 !important; }
+.text-red-600 { color: #dc2626 !important; }
+.text-red-700 { color: #b91c1c !important; }
+.text-emerald-500 { color: #10b981 !important; }
+.text-sky-400 { color: #38bdf8 !important; }
+.text-sky-500 { color: #0ea5e9 !important; }
+.text-orange-500 { color: #f97316 !important; }
+.text-orange-600 { color: #ea580c !important; }
+.text-purple-600 { color: #9333ea !important; }
+.text-teal-500 { color: #14b8a6 !important; }
+.text-rose-500 { color: #f43f5e !important; }
+.text-indigo-500 { color: #6366f1 !important; }
+.text-indigo-600 { color: #4f46e5 !important; }
 """
 
 with open("assets/index.css", "w", encoding="utf-8") as f:
