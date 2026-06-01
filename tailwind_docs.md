@@ -1,58 +1,58 @@
-# Tailwind CSS v4.0 Installation Guides (Scope A)
+# Tailwind CSS v4.3 安装指南 (Scope A)
 
-This document contains a consolidated collection of all Tailwind CSS installation guides and framework setup instructions compiled directly from the official documentation.
+此文档包含从官方文档直接编译的所有 Tailwind CSS 安装指南和框架设置说明的合并集合。
 
-## Table of Contents
+## 目录
 
-- [General Guides](#general-guides)
+- [常规指南](#常规指南)
   - [Tailwind CLI](#tailwind-cli)
   - [Using PostCSS](#using-postcss)
   - [Using Vite](#using-vite)
   - [Play CDN](#play-cdn)
-- [Framework-Specific Guides](#framework-specific-guides)
-  - [AdonisJS](#adonisjs)
-  - [Angular](#angular)
-  - [Astro](#astro)
+- [框架特定指南](#框架特定指南)
+  - [阿多尼斯JS](#adonisjs)
+  - [角](#angular)
+  - [阿斯特罗](#astro)
   - [Ember.js](#emberjs)
-  - [Gatsby](#gatsby)
-  - [Laravel](#laravel)
-  - [Meteor](#meteor)
+  - [盖茨比](#gatsby)
+  - [拉维尔](#laravel)
+  - [流星](#meteor)
   - [Next.js](#nextjs)
-  - [Nuxt](#nuxtjs)
-  - [Parcel](#parcel)
-  - [Phoenix](#phoenix)
-  - [Qwik](#qwik)
-  - [React Router](#react-router)
-  - [Rspack](#rspack)
-  - [Ruby on Rails](#ruby-on-rails)
+  - [努克斯特](#nuxtjs)
+  - [包裹](#parcel)
+  - [凤凰](#phoenix)
+  - [奎克](#qwik)
+  - [反应路由器](#react-router)
+  - [RS包](#rspack)
+  - [红宝石 on Rails](#ruby-on-rails)
   - [SolidJS](#solidjs)
-  - [SvelteKit](#sveltekit)
-  - [Symfony](#symfony)
-  - [TanStack Start](#tanstack-start)
+  - [苗条套件](#sveltekit)
+  - [交响乐团](#symfony)
+  - [TanStack 启动](#tanstack-start)
 
 ---
 
-## General Guides
+## <a id="常规指南"></a>常规指南
 
 ### Tailwind CLI
 
-The simplest and fastest way to get up and running with Tailwind CSS from scratch is with the Tailwind CLI tool.
+从头开始使用 Tailwind CSS 最简单、最快的方法是使用 Tailwind CLI 工具。
 
-#### Step 1: Install Tailwind CSS
+#### 步骤 1: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'t'a'i'l'w'i'n'd'c's's'`' 'a'n'd' '`'@'t'a'i'l'w'i'n'd'c's's'/'c'l'i'`' 'v'i'a' 'n'p'm'.'
+'通'过'`'n'p'm'`'安'装'`'t'a'i'l'w'i'n'd'c's's'和'@'t'a'i'l'w'i'n'd'c's's'/'c'l'i'`'。'
 
-#### Step 2: Import Tailwind in your CSS
+#### 步骤 2: 在 CSS 中导入 Tailwind
 
-'A'd'd' 't'h'e' '`'@'i'm'p'o'r't' '"'t'a'i'l'w'i'n'd'c's's'"';'`' 'i'm'p'o'r't' 't'o' 'y'o'u'r' 'm'a'i'n' 'C'S'S' 'f'i'l'e'.'
+'将'`'@' 'i'm'p'o'r't' '“'t'a'i'l'w'i'n'd'c's's'”';'`'导'入'到'您'的'主'C'S'S'文'件'。'
 
-#### Step 3: Start the Tailwind CLI build process
+#### 步骤 3: 启动 Tailwind CLI 构建过程
 
 'R'u'n' 't'h'e' 'C'L'I' 't'o'o'l' 't'o' 's'c'a'n' 'y'o'u'r' 's'o'u'r'c'e' 'f'i'l'e's' 'f'o'r' 'c'l'a's's'e's' 'a'n'd' 'b'u'i'l'd' 'y'o'u'r' 'C'S'S'.'
 
-#### Step 4: Start using Tailwind in your HTML
+#### 步骤 4: 开始在 HTML 中使用 Tailwind
 
-'A'd'd' 'y'o'u'r' 'c'o'm'p'i'l'e'd' 'C'S'S' 'f'i'l'e' 't'o' 't'h'e' '`'<'h'e'a'd'>'`' 'a'n'd' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'将'已'编'译'的'C'S'S'文'件'添'加'到'，'`'<'h'e'a'd'>'`'并'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 *src/index.html*
 ```html
@@ -75,22 +75,22 @@ The simplest and fastest way to get up and running with Tailwind CSS from scratc
 
 ---
 
-### Installing Tailwind CSS with PostCSS
+### 使用 PostCSS 安装 Tailwind CSS
 
-Installing Tailwind CSS as a PostCSS plugin is the most seamless way to integrate it with frameworks like Next.js and Angular.
+将 Tailwind CSS 作为 PostCSS 插件安装是将其与 Next.js 和 Angular 等框架集成的最无缝方式。
 
-#### Step 1: Install Tailwind CSS
+#### 步骤 1: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'t'a'i'l'w'i'n'd'c's's'`',' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`',' 'a'n'd' '`'p'o's't'c's's'`' 'v'i'a' 'n'p'm'.'
+'通'过'`'n'p'm'`'安'装'`'t'a'i'l'w'i'n'd'c's's'、'@'t'a'i'l'w'i'n'd'c's's'/'`' '`'p'o's't'c's's'`'和'p'o's't'c's's'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/postcss postcss
 ```
 
-#### Step 2: Add Tailwind to your PostCSS configuration
+#### 步骤 2: 将 Tailwind 添加到您的 PostCSS 配置中
 
-'A'd'd' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 't'o' 'y'o'u'r' '`'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'`' 'f'i'l'e',' 'o'r' 'w'h'e'r'e'v'e'r' 'P'o's't'C'S'S' 'i's' 'c'o'n'f'i'g'u'r'e'd' 'i'n' 'y'o'u'r' 'p'r'o'j'e'c't'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'`'p'o's't'c's's'添'加'`'到'`'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'文'件'或'项'目'中'配'置'P'o's't'C'S'S'的'任'何'位'置'。'
 
 *postcss.config.mjs*
 ```js
@@ -102,27 +102,27 @@ export default {
         }
 ```
 
-#### Step 3: Import Tailwind CSS
+#### 步骤 3: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' 'y'o'u'r' 'C'S'S' 'f'i'l'e' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'在'`'导'入'顺'风'C'S'S'的'C'S'S'文'件'中'添'加'@' 'i'm'p'o'r't'`'。'
 
 *CSS*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 4: Start your build process
+#### 步骤 4: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`' 'o'r' 'w'h'a't'e'v'e'r' 'c'o'm'm'a'n'd' 'i's' 'c'o'n'f'i'g'u'r'e'd' 'i'n' 'y'o'u'r' '`'p'a'c'k'a'g'e'.'j's'o'n'`' 'f'i'l'e'.'
+'`'使'用'n'p'm' 'r'u'n' 'd'e'v'`'或'在'p'a'c'k'a'g'e'.'j's'o'n'文'件'中'配'置'的'任'何'命'令'运'行'构'`'`'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 5: Start using Tailwind in your HTML
+#### 步骤 5: 开始在 HTML 中使用 Tailwind
 
-'M'a'k'e' 's'u'r'e' 'y'o'u'r' 'c'o'm'p'i'l'e'd' 'C'S'S' 'i's' 'i'n'c'l'u'd'e'd' 'i'n' 't'h'e' '`'<'h'e'a'd'>'`'<'e'm'>'('y'o'u'r' 'f'r'a'm'e'w'o'r'k' 'm'i'g'h't' 'h'a'n'd'l'e' 't'h'i's' 'f'o'r' 'y'o'u')'<'/'e'm'>',' 't'h'e'n' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'确'保'已'编'译'的'C'S'S'包'含'在'中'`'<'h'e'a'd'>'`'<'e'm'>'（'您'的'框'架'可'能'会'为'您'处'理'此'问'题'）'<'/'e'm'>' '，'然'后'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 *HTML*
 ```html
@@ -145,11 +145,11 @@ npm run dev
 
 ---
 
-### Installing Tailwind CSS with Vite
+### 使用 Vite 安装 Tailwind CSS
 
-Installing Tailwind CSS as a Vite plugin is the most seamless way to integrate it with frameworks like Laravel, SvelteKit, React Router, Nuxt, and SolidJS.
+将 Tailwind CSS 作为 Vite 插件安装是将其与 Laravel、SvelteKit、React Router、Nuxt 和 SolidJS 等框架集成的最无缝方式。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'V'i't'e' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['C'r'e'a't'e' 'V'i't'e']'('h't't'p's':'/'/'v'i't'e'.'d'e'v'/'g'u'i'd'e'/'#'s'c'a'f'f'o'l'd'i'n'g'-'y'o'u'r'-'f'i'r's't'-'v'i't'e'-'p'r'o'j'e'c't')'.'
 
@@ -159,18 +159,18 @@ npm create vite@latest my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'t'a'i'l'w'i'n'd'c's's'`' 'a'n'd' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'v'i'a' 'n'p'm'.'
+'通'过'`'n'p'm'`'安'装'`'t'a'i'l'w'i'n'd'c's's'和'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure the Vite plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'您'的'V'i't'e'配'置'中'。'
 
 *vite.config.ts*
 ```js
@@ -186,27 +186,27 @@ import { defineConfig } from 'vite'
         })
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' 'y'o'u'r' 'C'S'S' 'f'i'l'e' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'在'`'导'入'顺'风'C'S'S'的'C'S'S'文'件'中'添'加'@' 'i'm'p'o'r't'`'。'
 
 *CSS*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`' 'o'r' 'w'h'a't'e'v'e'r' 'c'o'm'm'a'n'd' 'i's' 'c'o'n'f'i'g'u'r'e'd' 'i'n' 'y'o'u'r' '`'p'a'c'k'a'g'e'.'j's'o'n'`' 'f'i'l'e'.'
+'`'使'用'n'p'm' 'r'u'n' 'd'e'v'`'或'在'p'a'c'k'a'g'e'.'j's'o'n'文'件'中'配'置'的'任'何'命'令'运'行'构'`'`'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 6: Start using Tailwind in your HTML
+#### 步骤 6: 开始在 HTML 中使用 Tailwind
 
-'M'a'k'e' 's'u'r'e' 'y'o'u'r' 'c'o'm'p'i'l'e'd' 'C'S'S' 'i's' 'i'n'c'l'u'd'e'd' 'i'n' 't'h'e' '`'<'h'e'a'd'>'`'<'e'm'>'('y'o'u'r' 'f'r'a'm'e'w'o'r'k' 'm'i'g'h't' 'h'a'n'd'l'e' 't'h'i's' 'f'o'r' 'y'o'u')'<'/'e'm'>',' 't'h'e'n' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'确'保'已'编'译'的'C'S'S'包'含'在'中'`'<'h'e'a'd'>'`'<'e'm'>'（'您'的'框'架'可'能'会'为'您'处'理'此'问'题'）'<'/'e'm'>' '，'然'后'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 *HTML*
 ```html
@@ -229,13 +229,13 @@ npm run dev
 
 ---
 
-### Play CDN
+### 播放CDN
 
-Use the Play CDN to try Tailwind right in the browser without any build step.
+使用 Play CDN 直接在浏览器中尝试 Tailwind，无需任何构建步骤。
 
-#### Step 1: Add the Play CDN script to your HTML
+#### 步骤 1: 将 Play CDN 脚本添加到您的 HTML 中
 
-'A'd'd' 't'h'e' 'P'l'a'y' 'C'D'N' 's'c'r'i'p't' 't'a'g' 't'o' 't'h'e' '`'&'l't';'h'e'a'd'&'g't';'`' 'o'f' 'y'o'u'r' 'H'T'M'L' 'f'i'l'e',' 'a'n'd' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'将'播'放'C'D'N'脚'本'标'签'添'加'到'H'T'M'L'文'件'的'`'&'l't';'h'e'a'd'&'g't';'`' '，'并'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 *index.html*
 ```html
@@ -256,7 +256,7 @@ Use the Play CDN to try Tailwind right in the browser without any build step.
         </html>
 ```
 
-#### Step 2: Try adding some custom CSS
+#### 步骤 2: 尝试添加一些自定义 CSS
 
 'U's'e' '`'t'y'p'e'='"'t'e'x't'/'t'a'i'l'w'i'n'd'c's's'"'`' 't'o' 'a'd'd' 'c'u's't'o'm' 'C'S'S' 't'h'a't' 's'u'p'p'o'r't's' 'a'l'l' 'o'f' 'T'a'i'l'w'i'n'd'''s' 'C'S'S' 'f'e'a't'u'r'e's'.'
 
@@ -286,15 +286,15 @@ Use the Play CDN to try Tailwind right in the browser without any build step.
 
 ---
 
-## Framework-Specific Guides
+## <a id="框架特定指南"></a>框架特定指南
 
-### <a id="adonisjs"></a>Install Tailwind CSS with AdonisJS
+### <a id="adonisjs"></a>使用 AdonisJS 安装 Tailwind CSS
 
-Setting up Tailwind CSS in an AdonisJS project.
+在 AdonisJS 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'A'd'o'n'i's'J'S' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['C'r'e'a't'e' 'A'd'o'n'i's'J'S']'('h't't'p's':'/'/'d'o'c's'.'a'd'o'n'i's'j's'.'c'o'm'/'g'u'i'd'e's'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'i'n's't'a'l'l'a't'i'o'n')'.'
+'如'果'您'还'没'有'设'置'一'个'新'的'A'd'o'n'i's'J'S'项'目'，'请'从'创'建'一'个'新'的'A'd'o'n'i's'J'S'项'目'开'始'。'最'常'见'的'方'法'是'使'用'['C'r'e'a't'e' 'A'd'o'n'i's'J'S']'('h't't'p's':'/'/'d'o'c's'.'a'd'o'n'i's'j's'.'c'o'm'/'g'u'i'd'e's'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'i'n's't'a'l'l'a't'i'o'n')'。'
 
 *Terminal*
 ```shell
@@ -302,18 +302,18 @@ npm init adonisjs@latest my-project -- --kit=web
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure Vite Plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'您'的'V'i't'e'配'置'中'。'
 
 *vite.config.ts*
 ```ts
@@ -333,9 +333,9 @@ import { defineConfig } from 'vite'
         })
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'r'e's'o'u'r'c'e's'/'c's's'/'a'p'p'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'''s' 's't'y'l'e's'.' 'A'd'd'i't'i'o'n'a'l'l'y',' 't'e'l'l' 'T'a'i'l'w'i'n'd' 'C'S'S' 't'o' 's'c'a'n' 'y'o'u'r' '`'r'e's'o'u'r'c'e's'/'v'i'e'w's'`' 'd'i'r'e'c't'o'r'y' 'f'o'r' 'u't'i'l'i't'i'e's'.'
+'将'`'@' 'i'm'p'o'r't'`'添'加'到'`'.'/'r'e's'o'u'r'c'e's'/'c's's'/'a'p'p'.'c's's'`' '，'用'于'导'入'顺'风'C'S'S'的'样'式'。'此'外'，'告'诉'T'a'i'l'w'i'n'd' 'C'S'S'扫'描'您'的'`'资'源'/'视'图'`'目'录'以'查'找'实'用'程'序'。'
 
 *app.css*
 ```css
@@ -343,13 +343,13 @@ import { defineConfig } from 'vite'
         @source "../views";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
-'M'a'k'e' 's'u'r'e' 'y'o'u'r' 'c'o'm'p'i'l'e'd' 'C'S'S' 'i's' 'i'n'c'l'u'd'e'd' 'i'n' 't'h'e' '`'<'h'e'a'd'>'`' 't'h'e'n' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'确'保'已'编'译'的'C'S'S'包'含'在'中'，'`'<'h'e'a'd'>'`'然'后'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 *home.edge*
 ```edge
@@ -373,13 +373,13 @@ import { defineConfig } from 'vite'
 
 ---
 
-### <a id="angular"></a>Install Tailwind CSS with Angular
+### <a id="angular"></a>使用 Angular 安装 Tailwind CSS
 
-Setting up Tailwind CSS in an Angular project.
+在 Angular 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'A'n'g'u'l'a'r' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['A'n'g'u'l'a'r' 'C'L'I']'('h't't'p's':'/'/'a'n'g'u'l'a'r'.'d'e'v'/'t'o'o'l's'/'c'l'i'/'s'e't'u'p'-'l'o'c'a'l')'.'
+'如'果'您'还'没'有'设'置'一'个'新'的'A'n'g'u'l'a'r'项'目'，'请'从'创'建'一'个'新'的'A'n'g'u'l'a'r'项'目'开'始'。'最'常'见'的'方'法'是'使'用'['A'n'g'u'l'a'r' 'C'L'I']'('h't't'p's':'/'/'a'n'g'u'l'a'r'.'d'e'v'/'t'o'o'l's'/'c'l'i'/'s'e't'u'p'-'l'o'c'a'l')'。'
 
 *Terminal*
 ```shell
@@ -387,18 +387,18 @@ ng new my-project --style css
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'(' ' 'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.' ' ')',' '/'/' 'N'O'T'E':' 'T'h'e' '`'-'-'f'o'r'c'e'`' 'f'l'a'g' 'i's' 'u's'e'd' 't'o' 'm'a'k'e' 's'u'r'e' 't'h'e' 'i'n's't'a'l'l'a't'i'o'n' 's'u'c'c'e'e'd's'.' 'A'n'g'u'l'a'r' 'h'a's' 'a' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'y' 'o'n' '`'t'a'i'l'w'i'n'd'c's's'`' 'v'3' 'w'h'i'c'h' 'c'a'u's'e's' 'e'r'r'o'r's' 'w'h'e'n' 'i'n's't'a'l'l'i'n'g' '`'t'a'i'l'w'i'n'd'c's's'`' 'v'4'.' 'c'o'd'e':' '{' 'n'a'm'e':' '"'T'e'r'm'i'n'a'l'"',' 'l'a'n'g':' '"'s'h'e'l'l'"'
+'(' '通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'`'p'o's't'c's's'及'其'对'等'依'赖'。')','/'/'注'意'：' '`'-'-'f'o'r'c'e'`'标'志'用'于'确'保'安'装'成'功'。'A'n'g'u'l'a'r'对'''t'a'i'l'w'i'n'd'c's's'`' 'v'3'有'对'等'依'赖'，'在'安'装'`'t'a'i'l'w'i'n'd'c's's'`' 'v'4'时'会'导'致'错'误'。'代'码'：' '{'n'a'm'e':' '"'T'e'r'm'i'n'a'l'"',' 'l'a'n'g':' '"'s'h'e'l'l'"'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/postcss postcss --force
 ```
 
-#### Step 3: Configure PostCSS Plugins
+#### 步骤 3: 配置 PostCSS 插件
 
-'C'r'e'a't'e' 'a' '`'.'p'o's't'c's's'r'c'.'j's'o'n'`' 'f'i'l'e' 'i'n' 't'h'e' 'r'o'o't' 'o'f' 'y'o'u'r' 'p'r'o'j'e'c't' 'a'n'd' 'a'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'P'o's't'C'S'S' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'在'项'目'根'`'目'`'录'中'创'建'.'p'o's't'c's's'r'c'.'j's'o'n'文'件'，'并'将'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`'插'件'添'加'到'P'o's't'C'S'S'配'置'中'。'
 
 *.postcssrc.json*
 ```js
@@ -410,25 +410,25 @@ npm install tailwindcss @tailwindcss/postcss postcss --force
         }
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'s'r'c'/'s't'y'l'e's'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'导'入'顺'风'C'S'S'的'`'@' 'i'm'p'o'r't'`'添'加'到'`'.'/'s'r'c'/'s't'y'l'e's'.'c's's'`'。'
 
 *styles.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'g' 's'e'r'v'e'`'.'
+'使'用'`'n'g' 's'e'r'v'e'`'运'行'构'建'过'程'。'
 
 *Terminal*
 ```shell
 ng serve
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -443,13 +443,13 @@ ng serve
 
 ---
 
-### <a id="astro"></a>Install Tailwind CSS with Astro
+### <a id="astro"></a>使用 Astro 安装 Tailwind CSS
 
-Setting up Tailwind CSS in an Astro project.
+在 Astro 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'A's't'r'o' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['c'r'e'a't'e' 'a's't'r'o']'('h't't'p's':'/'/'d'o'c's'.'a's't'r'o'.'b'u'i'l'd'/'e'n'/'i'n's't'a'l'l'-'a'n'd'-'s'e't'u'p'/'#'i'n's't'a'l'l'-'f'r'o'm'-'t'h'e'-'c'l'i'-'w'i'z'a'r'd')'.'
+'如'果'您'还'没'有'设'置'一'个'新'的'A's't'r'o'项'目'，'请'从'创'建'一'个'新'的'A's't'r'o'项'目'开'始'。'最'常'见'的'方'法'是'使'用'['C'R'E'A'T'E' 'A'S'T'R'O']'('h't't'p's':'/'/'d'o'c's'.'a's't'r'o'.'b'u'i'l'd'/'e'n'/'i'n's't'a'l'l'-'a'n'd'-'s'e't'u'p'/'#'i'n's't'a'l'l'-'f'r'o'm'-'t'h'e'-'c'l'i'-'w'i'z'a'r'd')'。'
 
 *Terminal*
 ```shell
@@ -457,18 +457,18 @@ npm create astro@latest my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure Vite Plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'p'l'u'g'i'n's' 'i'n' 'y'o'u'r' 'A's't'r'o' 'c'o'n'f'i'g' 'f'i'l'e'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'A's't'r'o'配'置'文'件'中'的'V'i't'e'插'件'。'
 
 *astro.config.mjs*
 ```js
@@ -486,37 +486,37 @@ npm install tailwindcss @tailwindcss/vite
         });
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'C'r'e'a't'e' 'a' '`'.'/'s'r'c'/'s't'y'l'e's'/'g'l'o'b'a'l'.'c's's'`' 'f'i'l'e' 'a'n'd' 'a'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 'f'o'r' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'创'建'`'.'/'s'r'c'/'s't'y'l'e's'/'g'l'o'b'a'l'.'c's's'`'文'件'，'并'为'T'a'i'l'w'i'n'd' 'C'S'S'添'加'`'@' 'i'm'p'o'r't'`'。'
 
 *global.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't' 'w'h'i'l'e' 'm'a'k'i'n'g' 's'u'r'e' 't'o' 'i'm'p'o'r't' 't'h'e' 'n'e'w'l'y' 'c'r'e'a't'e'd' 'C'S'S' 'f'i'l'e'.'
 
 ---
 
-### <a id="emberjs"></a>Install Tailwind CSS with Ember.js
+### <a id="emberjs"></a>使用 Ember.js 安装 Tailwind CSS
 
-Setting up Tailwind CSS in an Ember.js project.
+在 Ember.js 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'E'm'b'e'r'.'j's' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '[' 'E'm'b'e'r' 'C'L'I' ']'('h't't'p's':'/'/'g'u'i'd'e's'.'e'm'b'e'r'j's'.'c'o'm'/'r'e'l'e'a's'e'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'q'u'i'c'k'-'s't'a'r't'/'#'t'o'c'_'c'r'e'a't'e'-'a'-'n'e'w'-'a'p'p'l'i'c'a't'i'o'n')' '.'
+'如'果'您'还'没'有'设'置'一'个'新'的'E'm'b'e'r'.'j's'项'目'，'请'从'创'建'一'个'新'的'E'm'b'e'r'.'j's'项'目'开'始'。'最'常'见'的'方'法'是'使'用'['E'm'b'e'r' 'C'L'I' ']'('h't't'p's':'/'/'g'u'i'd'e's'.'e'm'b'e'r'j's'.'c'o'm'/'r'e'l'e'a's'e'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'q'u'i'c'k'-'s't'a'r't'/'#'t'o'c'_'c'r'e'a't'e'-'a'-'n'e'w'-'a'p'p'l'i'c'a't'i'o'n')'。'
 
 *Terminal*
 ```shell
@@ -524,7 +524,7 @@ npx ember-cli new my-project --embroider --no-welcome
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
 'U's'i'n'g' 'n'p'm',' 'i'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's',' 'a's' 'w'e'l'l' 'a's' '`'p'o's't'c's's'-'l'o'a'd'e'r'`'.'
 
@@ -533,9 +533,9 @@ npx ember-cli new my-project --embroider --no-welcome
 npm install tailwindcss @tailwindcss/postcss postcss postcss-loader
 ```
 
-#### Step 3: Enable PostCSS support
+#### 步骤 3: 启用 PostCSS 支持
 
-'I'n' 'y'o'u'r' '`'e'm'b'e'r'-'c'l'i'-'b'u'i'l'd'.'j's'`' 'f'i'l'e',' 'c'o'n'f'i'g'u'r'e' 'P'o's't'C'S'S' 't'o' 'p'r'o'c'e's's' 'y'o'u'r' 'C'S'S' 'f'i'l'e's'.'
+'在'e'm'b'e'r'-'c'l'i'-'b'u'i'l'd'.'j's'`'文'件'`'中'，'配'置'P'o's't'C'S'S'以'处'理'C'S'S'文'件'。'
 
 *ember-cli-build.js*
 ```js
@@ -572,9 +572,9 @@ npm install tailwindcss @tailwindcss/postcss postcss postcss-loader
         };
 ```
 
-#### Step 4: Configure PostCSS Plugins
+#### 步骤 4: 配置 PostCSS 插件
 
-'C'r'e'a't'e' 'a' '`'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'`' 'f'i'l'e' 'i'n' 't'h'e' 'r'o'o't' 'o'f' 'y'o'u'r' 'p'r'o'j'e'c't' 'a'n'd' 'a'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'P'o's't'C'S'S' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'在'项'目'根'`'目'`'录'中'创'建'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'文'件'，'并'将'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`'插'件'添'加'到'P'o's't'C'S'S'配'置'中'。'
 
 *postcss.config.mjs*
 ```js
@@ -586,18 +586,18 @@ export default {
         }
 ```
 
-#### Step 5: Import Tailwind CSS
+#### 步骤 5: 导入 Tailwind CSS
 
-'C'r'e'a't'e' 'a'n' '`'.'/'a'p'p'/'a'p'p'.'c's's'`' 'f'i'l'e' 'a'n'd' 'a'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 'f'o'r' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'创'建'一'个'`'.'/'a'p'p'/'a'p'p'.'c's's'`'文'件'，'并'为'T'a'i'l'w'i'n'd' 'C'S'S'添'加'一'个'`'@' 'i'm'p'o'r't'`'。'
 
 *app.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 6: Import the CSS file
+#### 步骤 6: 导入 CSS 文件
 
-'I'm'p'o'r't' 't'h'e' 'n'e'w'l'y'-'c'r'e'a't'e'd' '`'.'/'a'p'p'/'a'p'p'.'c's's'`' 'f'i'l'e' 'i'n' 'y'o'u'r' '`'.'/'a'p'p'/'a'p'p'.'j's'`' 'f'i'l'e'.'
+'在'`'.'/'a'p'p'/'`' '`'a'p'p'.'j's'文'件'中'导'入'新'创'建'的'.'/'a'p'p'/'`'a'p'p'.'c's's'文'件'。'
 
 *app.js*
 ```js
@@ -617,28 +617,28 @@ import Application from '@ember/application';
         loadInitializers(App, config.modulePrefix);
 ```
 
-#### Step 7: Start your build process
+#### 步骤 7: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 's't'a'r't'`'.'
+'使'用'`'n'p'm' 'r'u'n' 's't'a'r't'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run start
 ```
 
-#### Step 8: Start using Tailwind in your project
+#### 步骤 8: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
 ---
 
-### <a id="gatsby"></a>Install Tailwind CSS with Gatsby
+### <a id="gatsby"></a>使用 Gatsby 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Gatsby project.
+在 Gatsby 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'G'a't's'b'y' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['G'a't's'b'y' 'C'L'I']'('h't't'p's':'/'/'w'w'w'.'g'a't's'b'y'j's'.'c'o'm'/'d'o'c's'/'r'e'f'e'r'e'n'c'e'/'g'a't's'b'y'-'c'l'i'/'#'h'o'w'-'t'o'-'u's'e'-'g'a't's'b'y'-'c'l'i')'.'
+'如'果'您'还'没'有'设'置'一'个'新'的'G'a't's'b'y'项'目'，'请'从'创'建'一'个'新'的'G'a't's'b'y'项'目'开'始'。'最'常'见'的'方'法'是'使'用'['G'a't's'b'y' 'C'L'I']'('h't't'p's':'/'/'w'w'w'.'g'a't's'b'y'j's'.'c'o'm'/'d'o'c's'/'r'e'f'e'r'e'n'c'e'/'g'a't's'b'y'-'c'l'i'/'#'h'o'w'-'t'o'-'u's'e'-'g'a't's'b'y'-'c'l'i')'。'
 
 *Terminal*
 ```shell
@@ -646,7 +646,7 @@ gatsby new my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
 'U's'i'n'g' 'n'p'm',' 'i'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`',' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's',' 'a'n'd' '`'g'a't's'b'y'-'p'l'u'g'i'n'-'p'o's't'c's's'`'.'
 
@@ -655,9 +655,9 @@ gatsby new my-project
 npm install @tailwindcss/postcss tailwindcss postcss gatsby-plugin-postcss
 ```
 
-#### Step 3: Enable the Gatsby PostCSS plugin
+#### 步骤 3: 启用 Gatsby PostCSS 插件
 
-'I'n' 'y'o'u'r' '`'g'a't's'b'y'-'c'o'n'f'i'g'.'j's'`' 'f'i'l'e',' 'e'n'a'b'l'e' '`'g'a't's'b'y'-'p'l'u'g'i'n'-'p'o's't'c's's'`'.' 'S'e'e' '['t'h'e' 'p'l'u'g'i'n'''s' 'd'o'c'u'm'e'n't'a't'i'o'n']'('h't't'p's':'/'/'w'w'w'.'g'a't's'b'y'j's'.'c'o'm'/'p'l'u'g'i'n's'/'g'a't's'b'y'-'p'l'u'g'i'n'-'p'o's't'c's's'/')' 'f'o'r' 'm'o'r'e' 'i'n'f'o'r'm'a't'i'o'n'.'
+'在'g'a't's'b'y'-'c'o'n'f'i'g'.'j's'`'文'件'`'中'，'启'用'`'g'a't's'b'y'-'p'l'u'g'i'n'-'p'o's't'c's's'`'。'有'关'更'多'信'息'['，'请'参'阅'插'件'的'文'档']'('h't't'p's':'/'/'w'w'w'.'g'a't's'b'y'j's'.'c'o'm'/'p'l'u'g'i'n's'/'g'a't's'b'y'-'p'l'u'g'i'n'-'p'o's't'c's's'/')'。'
 
 *gatsby-config.js*
 ```js
@@ -670,9 +670,9 @@ module.exports = {
         }
 ```
 
-#### Step 4: Configure PostCSS Plugins
+#### 步骤 4: 配置 PostCSS 插件
 
-'C'r'e'a't'e' 'a' '`'p'o's't'c's's'.'c'o'n'f'i'g'.'j's'`' 'f'i'l'e' 'i'n' 't'h'e' 'r'o'o't' 'o'f' 'y'o'u'r' 'p'r'o'j'e'c't' 'a'n'd' 'a'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'P'o's't'C'S'S' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'在'项'目'根'目'录'中'创'建'`'p'o's't'c's's'.'c'o'n'f'i'g'.'j's'`'文'件'，'并'将'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`'插'件'添'加'到'P'o's't'C'S'S'配'置'中'。'
 
 *postcss.config.js*
 ```js
@@ -684,34 +684,34 @@ module.exports = {
         };
 ```
 
-#### Step 5: Import Tailwind CSS
+#### 步骤 5: 导入 Tailwind CSS
 
-'C'r'e'a't'e' 'a' '`'.'/'s'r'c'/'s't'y'l'e's'/'g'l'o'b'a'l'.'c's's'`' 'f'i'l'e' 'a'n'd' 'a'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 'f'o'r' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'创'建'`'.'/'s'r'c'/'s't'y'l'e's'/'g'l'o'b'a'l'.'c's's'`'文'件'，'并'为'T'a'i'l'w'i'n'd' 'C'S'S'添'加'`'@' 'i'm'p'o'r't'`'。'
 
 *global.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 6: Import the CSS file
+#### 步骤 6: 导入 CSS 文件
 
-'C'r'e'a't'e' 'a' '`'g'a't's'b'y'-'b'r'o'w's'e'r'.'j's'`' 'f'i'l'e' 'a't' 't'h'e' 'r'o'o't' 'o'f' 'y'o'u'r' 'p'r'o'j'e'c't' 'i'f' 'i't' 'd'o'e's'n'''t' 'a'l'r'e'a'd'y' 'e'x'i's't',' 'a'n'd' 'i'm'p'o'r't' 'y'o'u'r' 'n'e'w'l'y'-'c'r'e'a't'e'd' '`'.'/'s'r'c'/'s't'y'l'e's'/'g'l'o'b'a'l'.'c's's'`' 'f'i'l'e'.'
+'在'项'目'根'`'目'`'录'下'创'建'一'个'g'a't's'b'y'-'b'r'o'w's'e'r'.'j's'文'件'（'如'果'该'文'件'尚'不'存'在'）' '，'然'后'导'入'新'创'建'的'`'.'/'s'r'c'/'s't'y'l'e's'/'g'l'o'b'a'l'.'c's's'`'文'件'。'
 
 *gatsby-browser.js*
 ```js
 import './src/styles/global.css';
 ```
 
-#### Step 7: Start your build process
+#### 步骤 7: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'g'a't's'b'y' 'd'e'v'e'l'o'p'`'.'
+'使'用'`'g'a't's'b'y' 'd'e'v'e'l'o'p'`'运'行'构'建'过'程'。'
 
 *Terminal*
 ```shell
 gatsby develop
 ```
 
-#### Step 8: Start using Tailwind in your project
+#### 步骤 8: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -731,13 +731,13 @@ export default function IndexPage() {
 
 ---
 
-### <a id="laravel"></a>Install Tailwind CSS with Laravel
+### <a id="laravel"></a>使用 Laravel 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Laravel project.
+在 Laravel 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'L'a'r'a'v'e'l' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['t'h'e' 'L'a'r'a'v'e'l' 'i'n's't'a'l'l'e'r']'('h't't'p's':'/'/'l'a'r'a'v'e'l'.'c'o'm'/'d'o'c's'#'c'r'e'a't'i'n'g'-'a'n'-'a'p'p'l'i'c'a't'i'o'n')'.'
+'如'果'您'还'没'有'设'置'一'个'新'的'L'a'r'a'v'e'l'项'目'，'请'从'创'建'一'个'新'的'L'a'r'a'v'e'l'项'目'开'始'。'最'常'见'的'方'法'是'使'用'['L'a'r'a'v'e'l'安'装'程'序']'('h't't'p's':'/'/'l'a'r'a'v'e'l'.'c'o'm'/'d'o'c's'#'c'r'e'a't'i'n'g'-'a'n'-'a'p'p'l'i'c'a't'i'o'n')'。'
 
 *Terminal*
 ```shell
@@ -745,27 +745,27 @@ laravel new my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Install Tailwind CSS
+#### 步骤 3: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'`'p'o's't'c's's'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/postcss postcss
 ```
 
-#### Step 4: Configure Vite Plugin
+#### 步骤 4: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'您'的'V'i't'e'配'置'中'。'
 
 *vite.config.ts*
 ```ts
@@ -782,9 +782,9 @@ import { defineConfig } from 'vite'
         })
 ```
 
-#### Step 5: Add Tailwind to your Laravel Mix configuration
+#### 步骤 5: 将 Tailwind 添加到您的 Laravel Mix 配置中
 
-'I'n' 'y'o'u'r' '`'w'e'b'p'a'c'k'.'m'i'x'.'j's'`' 'f'i'l'e',' 'a'd'd' '`'t'a'i'l'w'i'n'd'c's's'`' 'a's' 'a' 'P'o's't'C'S'S' 'p'l'u'g'i'n'.'
+'在'`'w'e'b'p'a'c'k'.'m'i'x'.'j's'`'文'件'中'，'将't'a'i'l'w'i'n'd'c's's'`'添'加'`'为'P'o's't'C'S'S'插'件'。'
 
 *webpack.mix.js*
 ```js
@@ -796,9 +796,9 @@ mix
           ]);
 ```
 
-#### Step 6: Import Tailwind CSS
+#### 步骤 6: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'r'e's'o'u'r'c'e's'/'c's's'/'a'p'p'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.' 'A'd'd'i't'i'o'n'a'l'l'y',' 't'e'l'l' 'T'a'i'l'w'i'n'd' 'C'S'S' 't'o' 's'c'a'n' 's'o'm'e' 'd'i'r'e'c't'o'r'i'e's' 'f'o'r' 'u't'i'l'i't'i'e's'.'
+'将'`'@' 'i'm'p'o'r't'`'添'加'到'`'.'/'r'e's'o'u'r'c'e's'/'c's's'/'a'p'p'.'c's's'`'以'导'入'顺'风'C'S'S'。'此'外'，'告'诉'T'a'i'l'w'i'n'd' 'C'S'S'扫'描'一'些'目'录'以'查'找'实'用'程'序'。'
 
 *app.css*
 ```css
@@ -810,27 +810,27 @@ mix
         @source "../**/*.js";
 ```
 
-#### Step 7: Start your build process
+#### 步骤 7: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 8: Start your build process
+#### 步骤 8: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'w'a't'c'h'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'w'a't'c'h'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run watch
 ```
 
-#### Step 9: Start using Tailwind in your project
+#### 步骤 9: 开始在您的项目中使用 Tailwind
 
-'M'a'k'e' 's'u'r'e' 'y'o'u'r' 'c'o'm'p'i'l'e'd' 'C'S'S' 'i's' 'i'n'c'l'u'd'e'd' 'i'n' 't'h'e' '`'<'h'e'a'd'>'`' 't'h'e'n' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'确'保'已'编'译'的'C'S'S'包'含'在'中'，'`'<'h'e'a'd'>'`'然'后'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 *app.blade.php*
 ```blade
@@ -852,9 +852,9 @@ npm run watch
         </html>
 ```
 
-#### Step 10: Start using Tailwind in your project
+#### 步骤 10: 开始在您的项目中使用 Tailwind
 
-'M'a'k'e' 's'u'r'e' 'y'o'u'r' 'c'o'm'p'i'l'e'd' 'C'S'S' 'i's' 'i'n'c'l'u'd'e'd' 'i'n' 't'h'e' '`'<'h'e'a'd'>'`' 't'h'e'n' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'确'保'已'编'译'的'C'S'S'包'含'在'中'，'`'<'h'e'a'd'>'`'然'后'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 *app.blade.php*
 ```blade
@@ -878,13 +878,13 @@ npm run watch
 
 ---
 
-### <a id="meteor"></a>Install Tailwind CSS with Meteor
+### <a id="meteor"></a>使用 Meteor 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Meteor project.
+在 Meteor 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'M'e't'e'o'r' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['t'h'e' 'M'e't'e'o'r' 'C'L'I']'('h't't'p's':'/'/'d'o'c's'.'m'e't'e'o'r'.'c'o'm'/'a'b'o'u't'/'i'n's't'a'l'l'.'h't'm'l')'.'
+'如'果'您'还'没'有'设'置'一'个'新'的'流'星'项'目'，'请'从'创'建'一'个'新'的'流'星'项'目'开'始'。'最'常'见'的'方'法'是'使'用'['M'e't'e'o'r' 'C'L'I']'('h't't'p's':'/'/'d'o'c's'.'m'e't'e'o'r'.'c'o'm'/'a'b'o'u't'/'i'n's't'a'l'l'.'h't'm'l')'。'
 
 *Terminal*
 ```shell
@@ -892,18 +892,18 @@ npx meteor create my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'`'p'o's't'c's's'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/postcss postcss postcss-load-config
 ```
 
-#### Step 3: Configure PostCSS Plugins
+#### 步骤 3: 配置 PostCSS 插件
 
-'C'r'e'a't'e' 'a' '`'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'`' 'f'i'l'e' 'i'n' 't'h'e' 'r'o'o't' 'o'f' 'y'o'u'r' 'p'r'o'j'e'c't' 'a'n'd' 'a'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'P'o's't'C'S'S' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'在'项'目'根'`'目'`'录'中'创'建'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'文'件'，'并'将'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`'插'件'添'加'到'P'o's't'C'S'S'配'置'中'。'
 
 *postcss.config.mjs*
 ```js
@@ -915,25 +915,25 @@ export default {
         };
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 'f'o'r' 'T'a'i'l'w'i'n'd' 'C'S'S' 't'o' 'y'o'u'r' '`'.'/'c'l'i'e'n't'/'m'a'i'n'.'c's's'`' 'f'i'l'e'.'
+'将'T'a'i'l'w'i'n'd' 'C'S'S'的'`'@' 'i'm'p'o'r't'`'添'加'到'`'.'/'c'l'i'e'n't'/'m'a'i'n'.'c's's'`'文'件'中'。'
 
 *main.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 's't'a'r't'`'.'
+'使'用'`'n'p'm' 'r'u'n' 's't'a'r't'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run start
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -949,13 +949,13 @@ export const App = () => (
 
 ---
 
-### <a id="nextjs"></a>Install Tailwind CSS with Next.js
+### <a id="nextjs"></a>使用 Next.js 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Next.js project.
+在 Next.js 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'N'e'x't'.'j's' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['C'r'e'a't'e' 'N'e'x't' 'A'p'p']'('h't't'p's':'/'/'n'e'x't'j's'.'o'r'g'/'d'o'c's'/'a'p'i'-'r'e'f'e'r'e'n'c'e'/'c'r'e'a't'e'-'n'e'x't'-'a'p'p')'.'
+'如'果'您'还'没'有'设'置'新'的'N'e'x't'.'j's'项'目'，'请'从'创'建'新'的'N'e'x't'.'j's'项'目'开'始'。'最'常'见'的'方'法'是'使'用'“'['创'建'下'一'个'应'用']'('h't't'p's':'/'/'n'e'x't'j's'.'o'r'g'/'d'o'c's'/'a'p'i'-'r'e'f'e'r'e'n'c'e'/'c'r'e'a't'e'-'n'e'x't'-'a'p'p')'”'。'
 
 *Terminal*
 ```shell
@@ -963,18 +963,18 @@ npx create-next-app@latest my-project --typescript --eslint --app
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'`'p'o's't'c's's'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/postcss postcss
 ```
 
-#### Step 3: Configure PostCSS Plugins
+#### 步骤 3: 配置 PostCSS 插件
 
-'C'r'e'a't'e' 'a' '`'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'`' 'f'i'l'e' 'i'n' 't'h'e' 'r'o'o't' 'o'f' 'y'o'u'r' 'p'r'o'j'e'c't' 'a'n'd' 'a'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'P'o's't'C'S'S' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'在'项'目'根'`'目'`'录'中'创'建'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'文'件'，'并'将'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`'插'件'添'加'到'P'o's't'C'S'S'配'置'中'。'
 
 *postcss.config.mjs*
 ```js
@@ -988,25 +988,25 @@ const config = {
         export default config;
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'a'p'p'/'g'l'o'b'a'l's'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'`'@' 'i'm'p'o'r't'添'加'到'导'入'`'顺'风'C'S'S'`'的'.'/'a'p'p'/'`'g'l'o'b'a'l's'.'c's's'。'
 
 *globals.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1024,13 +1024,13 @@ export default function Home() {
 
 ---
 
-### <a id="nuxtjs"></a>Install Tailwind CSS with Nuxt
+### <a id="nuxtjs"></a>使用 Nuxt 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Nuxt project.
+在 Nuxt 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'N'u'x't' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['C'r'e'a't'e' 'N'u'x't']'('h't't'p's':'/'/'n'u'x't'.'c'o'm'/'d'o'c's'/'4'.'x'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'i'n's't'a'l'l'a't'i'o'n'#'n'e'w'-'p'r'o'j'e'c't')'.'
+'如'果'您'还'没'有'设'置'一'个'新'的'N'u'x't'项'目'，'请'从'创'建'一'个'新'的'N'u'x't'项'目'开'始'。'最'常'见'的'方'法'是'使'用'['C'r'e'a't'e' 'N'u'x't']'('h't't'p's':'/'/'n'u'x't'.'c'o'm'/'d'o'c's'/'4'.'x'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'i'n's't'a'l'l'a't'i'o'n'#'n'e'w'-'p'r'o'j'e'c't')'。'
 
 *Terminal*
 ```shell
@@ -1038,18 +1038,18 @@ npm create nuxt my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure Vite Plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'N'u'x't' 'c'o'n'f'i'g'u'r'a't'i'o'n' 'a's' 'a' 'V'i't'e' 'p'l'u'g'i'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'作'为'V'i't'e'插'件'添'加'到'您'的'N'u'x't'配'置'中'。'
 
 *nuxt.config.ts*
 ```ts
@@ -1068,18 +1068,18 @@ npm install tailwindcss @tailwindcss/vite
         });
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'C'r'e'a't'e' 'a'n' '`'.'/'a'p'p'/'a's's'e't's'/'c's's'/'m'a'i'n'.'c's's'`' 'f'i'l'e' 'a'n'd' 'a'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'创'建'一'个'`'.'/'a'p'p'/'a's's'e't's'/'c's's'/'m'a'i'n'.'c's's'`'文'件'，'并'添'加'一'个'导'入'T'a'i'l'w'i'n'd' 'C'S'S'的'`'@' 'i'm'p'o'r't'`'。'
 
 *main.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Add the CSS file globally
+#### 步骤 5: 全局添加CSS文件
 
-'A'd'd' 'y'o'u'r' 'n'e'w'l'y'-'c'r'e'a't'e'd' '`'.'/'a'p'p'/'a's's'e't's'/'c's's'/'m'a'i'n'.'c's's'`' 't'o' 't'h'e' '`'c's's'`' 'a'r'r'a'y' 'i'n' 'y'o'u'r' '`'n'u'x't'.'c'o'n'f'i'g'.'t's'`' 'f'i'l'e'.'
+'将'新'创'建'的'`'.'/'a'p'p'/'a's's'e't's'/'c's's'/'m'a'i'n'.'c's's'`'添'加'到'`'n'u'x't'.'c'o'n'f'i'g'.'t's'文'件'中'的'c's's'`'数'`'`'组'中'。'
 
 *nuxt.config.ts*
 ```ts
@@ -1098,16 +1098,16 @@ import tailwindcss from "@tailwindcss/vite";
         });
 ```
 
-#### Step 6: Start your build process
+#### 步骤 6: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 7: Start using Tailwind in your project
+#### 步骤 7: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1124,13 +1124,13 @@ npm run dev
 
 ---
 
-### <a id="parcel"></a>Install Tailwind CSS with Parcel
+### <a id="parcel"></a>使用 Parcel 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Parcel project.
+在 Parcel 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
-'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'P'a'r'c'e'l' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'a'd'd' 'P'a'r'c'e'l' 'a's' 'a' 'd'e'v'-'d'e'p'e'n'd'e'n'c'y' 't'o' 'y'o'u'r' 'p'r'o'j'e'c't' 'a's' 'o'u't'l'i'n'e'd' 'i'n' 't'h'e'i'r' '['g'e't't'i'n'g' 's't'a'r't'e'd' 'g'u'i'd'e']'('h't't'p's':'/'/'p'a'r'c'e'l'j's'.'o'r'g'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'w'e'b'a'p'p'/')'.'
+'如'果'您'还'没'有'设'置'一'个'新'的'P'a'r'c'e'l'项'目'，'请'从'创'建'一'个'新'的'P'a'r'c'e'l'项'目'开'始'。'最'常'见'的'方'法'是'将'P'a'r'c'e'l'作'为'开'发'依'赖'项'添'加'到'项'目'中'，'如'['入'门'指'南']'('h't't'p's':'/'/'p'a'r'c'e'l'j's'.'o'r'g'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'w'e'b'a'p'p'/')'中'所'述'。'
 
 *Terminal*
 ```shell
@@ -1142,18 +1142,18 @@ mkdir my-project
         touch src/index.html
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'`'p'o's't'c's's'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/postcss
 ```
 
-#### Step 3: Configure PostCSS
+#### 步骤 3: 配置 PostCSS
 
-'C'r'e'a't'e' 'a' '`'.'p'o's't'c's's'r'c'`' 'f'i'l'e' 'i'n' 'y'o'u'r' 'p'r'o'j'e'c't' 'r'o'o't',' 'a'n'd' 'e'n'a'b'l'e' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'p'l'u'g'i'n'.'
+'在'项'目'根'目'录'中'创'建'`'.'p'o's't'c's's'r'c'`'文'件'，'并'启'用'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'插'`'件'。'
 
 *.postcssrc*
 ```json
@@ -1164,27 +1164,27 @@ npm install tailwindcss @tailwindcss/postcss
         }
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'C'r'e'a't'e' 'a' '`'.'/'s'r'c'/'i'n'd'e'x'.'c's's'`' 'f'i'l'e' 'a'n'd' 'a'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 'f'o'r' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'创'建'一'个'`'.'/'s'r'c'/'i'n'd'e'x'.'c's's'`'文'件'，'并'为'T'a'i'l'w'i'n'd' 'C'S'S'添'加'一'个'`'@' 'i'm'p'o'r't'`'。'
 
 *index.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'x' 'p'a'r'c'e'l' 's'r'c'/'i'n'd'e'x'.'h't'm'l'`'.'
+'使'用'`'n'p'x'包's'r'c'/'i'n'd'e'x'.'h't'm'l'运'行'构'建'过'程'`'。'
 
 *Terminal*
 ```shell
 npx parcel src/index.html
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
-'A'd'd' 'y'o'u'r' 'C'S'S' 'f'i'l'e' 't'o' 't'h'e' '`'<'h'e'a'd'>'`' 'a'n'd' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'将'C'S'S'文'件'添'加'到'，'`'<'h'e'a'd'>'`'并'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 *index.html*
 ```html
@@ -1208,11 +1208,11 @@ npx parcel src/index.html
 
 ---
 
-### <a id="phoenix"></a>Install Tailwind CSS with Phoenix
+### <a id="phoenix"></a>使用 Phoenix 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Phoenix project.
+在 Phoenix 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'P'h'o'e'n'i'x' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'Y'o'u' 'c'a'n' 'f'o'l'l'o'w' 't'h'e'i'r' '['i'n's't'a'l'l'a't'i'o'n' 'g'u'i'd'e']'('h't't'p's':'/'/'h'e'x'd'o'c's'.'p'm'/'p'h'o'e'n'i'x'/'i'n's't'a'l'l'a't'i'o'n'.'h't'm'l')' 't'o' 'g'e't' 'u'p' 'a'n'd' 'r'u'n'n'i'n'g'.'
 
@@ -1222,23 +1222,23 @@ mix phx.new myproject
         cd myproject
 ```
 
-#### Step 2: Install the Tailwind plugin
+#### 步骤 2: 安装 Tailwind 插件
 
-'A'd'd' 't'h'e' 'T'a'i'l'w'i'n'd' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'a'n'd' 'r'u'n' '`'m'i'x' 'd'e'p's'.'g'e't'`' 't'o' 'i'n's't'a'l'l' 'i't'.'
+'将'T'a'i'l'w'i'n'd'插'件'添'加'到'依'赖'项'中'，'并'`'运'行'm'i'x'`' 'd'e'p's'.'g'e't'进'行'安'装'。'
 
-#### Step 3: Configure the Tailwind plugin
+#### 步骤 3: 配置 Tailwind 插件
 
-'I'n' 'y'o'u'r' '`'c'o'n'f'i'g'/'c'o'n'f'i'g'.'e'x's'`' 'f'i'l'e' 'y'o'u' 'c'a'n' 's'e't' 'w'h'i'c'h' 'v'e'r's'i'o'n' 'o'f' 'T'a'i'l'w'i'n'd' 'C'S'S' 'y'o'u' 'w'a'n't' 't'o' 'u's'e' 'a'n'd' 'c'u's't'o'm'i'z'e' 'y'o'u'r' 'a's's'e't' 'p'a't'h's'.'
+'在'`'c'o'n'f'i'g'/'c'o'n'f'i'g'.'e'x's'文'件'`'中'，'您'可'以'设'置'要'使'用'的'T'a'i'l'w'i'n'd' 'C'S'S'版'本'并'自'定'义'资'产'路'径'。'
 
-#### Step 4: Update your deployment script
+#### 步骤 4: 更新您的部署脚本
 
-'C'o'n'f'i'g'u'r'e' 'y'o'u'r' '`'a's's'e't's'.'d'e'p'l'o'y'`' 'a'l'i'a's' 't'o' 'b'u'i'l'd' 'y'o'u'r' 'C'S'S' 'o'n' 'd'e'p'l'o'y'm'e'n't'.'
+'配'置'您'的'`'a's's'e't's'.'d'e'p'l'o'y'`'别'名'以'在'部'署'时'构'建'C'S'S'。'
 
-#### Step 5: Enable watcher in development
+#### 步骤 5: 在开发中启用观察者
 
-'A'd'd' 'T'a'i'l'w'i'n'd' 't'o' 'y'o'u'r' 'l'i's't' 'o'f' 'w'a't'c'h'e'r's' 'i'n' 'y'o'u'r' '`'.'/'c'o'n'f'i'g'/'d'e'v'.'e'x's'`' 'f'i'l'e'.'
+'将'T'a'i'l'w'i'n'd'添'加'到'`'.'/'c'o'n'f'i'g'/'`'d'e'v'.'e'x's'文'件'中'的'观'察'者'列'表'中'。'
 
-#### Step 6: Install Tailwind CSS
+#### 步骤 6: 安装 Tailwind CSS
 
 'R'u'n' 't'h'e' 'i'n's't'a'l'l' 'c'o'm'm'a'n'd' 't'o' 'd'o'w'n'l'o'a'd' 't'h'e' 's't'a'n'd'a'l'o'n'e' 'T'a'i'l'w'i'n'd' 'C'L'I'.'
 
@@ -1247,18 +1247,18 @@ mix phx.new myproject
 mix tailwind.install
 ```
 
-#### Step 7: Import Tailwind CSS
+#### 步骤 7: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'a's's'e't's'/'c's's'/'a'p'p'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'`'@' 'i'm'p'o'r't'`'添'加'到'`'.'/'a's's'e't's'/'c's's'/'a'p'p'.'c's's'`'以'导'入'顺'风'C'S'S'。'
 
 *app.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 8: Remove the default CSS import
+#### 步骤 8: 删除默认的 CSS 导入
 
-'R'e'm'o'v'e' 't'h'e' 'C'S'S' 'i'm'p'o'r't' 'f'r'o'm' '`'.'/'a's's'e't's'/'j's'/'a'p'p'.'j's'`',' 'a's' 'T'a'i'l'w'i'n'd' 'i's' 'n'o'w' 'h'a'n'd'l'i'n'g' 't'h'i's' 'f'o'r' 'y'o'u'.'
+'从'`'.'/'a's's'e't's'/'j's'/'a'p'p'.'j's'`'中'删'除'C'S'S'导'入'，'因'为'T'a'i'l'w'i'n'd'现'在'正'在'为'您'处'理'此'操'作'。'
 
 *app.js*
 ```js
@@ -1267,16 +1267,16 @@ mix tailwind.install
         import "../css/app.css"
 ```
 
-#### Step 9: Start your build process
+#### 步骤 9: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'m'i'x' 'p'h'x'.'s'e'r'v'e'r'`'.'
+'使'用'`'m'i'x' 'p'h'x'.'s'e'r'v'e'r'运'行'构'建'过'程'`'。'
 
 *Terminal*
 ```shell
 mix phx.server
 ```
 
-#### Step 10: Start using Tailwind in your project
+#### 步骤 10: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1291,11 +1291,11 @@ mix phx.server
 
 ---
 
-### <a id="qwik"></a>Install Tailwind CSS with Qwik
+### <a id="qwik"></a>使用 Qwik 安装 Tailwind CSS
 
-Setting up Tailwind CSS in an Qwik project.
+在 Qwik 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'Q'w'i'k' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['C'r'e'a't'e' 'Q'w'i'k']'('h't't'p's':'/'/'q'w'i'k'.'d'e'v'/'d'o'c's'/'g'e't't'i'n'g'-'s't'a'r't'e'd'/'#'c'r'e'a't'e'-'a'n'-'a'p'p'-'u's'i'n'g'-'t'h'e'-'c'l'i')'.'
 
@@ -1305,18 +1305,18 @@ npm create qwik@latest empty my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure Vite Plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'您'的'V'i't'e'配'置'中'。'
 
 *vite.config.ts*
 ```ts
@@ -1343,25 +1343,25 @@ import { defineConfig } from 'vite'
         })
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'s'r'c'/'g'l'o'b'a'l'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'`'@' 'i'm'p'o'r't'添'加'到'导'入'`'顺'风'C'S'S'的'`'.'/'s'r'c'/'g'l'o'b'a'l'.'c's's'`'。'
 
 *global.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1381,11 +1381,11 @@ import { component$ } from '@builder.io/qwik'
 
 ---
 
-### <a id="react-router"></a>Install Tailwind CSS with React Router
+### <a id="react-router"></a>使用 React Router 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a React Router project.
+在 React Router 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'R'e'a'c't' 'R'o'u't'e'r' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['C'r'e'a't'e' 'R'e'a'c't' 'R'o'u't'e'r']'('h't't'p's':'/'/'r'e'a'c't'r'o'u't'e'r'.'c'o'm'/'s't'a'r't'/'f'r'a'm'e'w'o'r'k'/'i'n's't'a'l'l'a't'i'o'n')'.'
 
@@ -1395,18 +1395,18 @@ npx create-react-router@latest my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure Vite Plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'您'的'V'i't'e'配'置'中'。'
 
 *vite.config.ts*
 ```ts
@@ -1426,25 +1426,25 @@ import { reactRouter } from "@react-router/dev/vite";
         });
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'a'p'p'/'a'p'p'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'`'@' 'i'm'p'o'r't'添'加'到'导'入'`'顺'风'C'S'S'的'`'.'/'a'p'p'/'a'p'p'.'c's's'`'。'
 
 *app.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1462,11 +1462,11 @@ export default function Home() {
 
 ---
 
-### <a id="rspack"></a>Install Tailwind CSS with Rspack
+### <a id="rspack"></a>使用 Rspack 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Rspack project.
+在 Rspack 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'R's'p'a'c'k' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['R's'p'a'c'k' 'C'L'I']'('h't't'p's':'/'/'r's'p'a'c'k'.'d'e'v'/'g'u'i'd'e'/'s't'a'r't'/'q'u'i'c'k'-'s't'a'r't'#'u's'i'n'g'-'t'h'e'-'r's'p'a'c'k'-'c'l'i')'.'
 
@@ -1475,18 +1475,18 @@ Setting up Tailwind CSS in a Rspack project.
 npm create rspack@latest
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's'.'
+'安'装'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/postcss postcss postcss-loader
 ```
 
-#### Step 3: Enable PostCSS support
+#### 步骤 3: 启用 PostCSS 支持
 
-'I'n' 'y'o'u'r' '`'r's'p'a'c'k'.'c'o'n'f'i'g'.'j's'`' 'f'i'l'e',' 'e'n'a'b'l'e' 't'h'e' 'P'o's't'C'S'S' 'l'o'a'd'e'r'.' 'S'e'e' '['t'h'e' 'd'o'c'u'm'e'n't'a't'i'o'n']'('h't't'p's':'/'/'r's'p'a'c'k'.'d'e'v'/'g'u'i'd'e'/'t'e'c'h'/'c's's'#'t'a'i'l'w'i'n'd'-'c's's')' 'f'o'r' 'm'o'r'e' 'i'n'f'o'r'm'a't'i'o'n'.'
+'在'r's'p'a'c'k'.'c'o'n'f'i'g'.'j's'`'文'件'`'中'，'启'用'P'o's't'C'S'S'加'载'器'。'有'关'更'多'信'['息'，'请'参'阅'文'档']'('h't't'p's':'/'/'r's'p'a'c'k'.'d'e'v'/'g'u'i'd'e'/'t'e'c'h'/'c's's'#'t'a'i'l'w'i'n'd'-'c's's')'。'
 
 *rspack.config.ts*
 ```ts
@@ -1506,9 +1506,9 @@ export default defineConfig({
         }
 ```
 
-#### Step 4: Configure PostCSS Plugins
+#### 步骤 4: 配置 PostCSS 插件
 
-'C'r'e'a't'e' 'a' '`'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'`' 'f'i'l'e' 'i'n' 't'h'e' 'r'o'o't' 'o'f' 'y'o'u'r' 'p'r'o'j'e'c't' 'a'n'd' 'a'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'P'o's't'C'S'S' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'在'项'目'根'`'目'`'录'中'创'建'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'文'件'，'并'将'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`'插'件'添'加'到'P'o's't'C'S'S'配'置'中'。'
 
 *postcss.config.mjs*
 ```js
@@ -1520,34 +1520,34 @@ export default {
         };
 ```
 
-#### Step 5: Import Tailwind CSS
+#### 步骤 5: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'s'r'c'/'i'n'd'e'x'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'`'@' 'i'm'p'o'r't'添'加'到'导'入'`'顺'风'C'S'S'的'`'.'/'s'r'c'/'i'n'd'e'x'.'c's's'`'。'
 
 *index.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 6: Import Tailwind CSS
+#### 步骤 6: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'s'r'c'/'s't'y'l'e'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'`'@' 'i'm'p'o'r't'添'加'到'导'入'`'顺'风'C'S'S'的'`'.'/'s'r'c'/'s't'y'l'e'.'c's's'`'。'
 
 *style.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 7: Start your build process
+#### 步骤 7: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 8: Start using Tailwind in your project
+#### 步骤 8: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1563,7 +1563,7 @@ export default function App() {
         }
 ```
 
-#### Step 9: Start using Tailwind in your project
+#### 步骤 9: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1580,11 +1580,11 @@ export default function App() {
 
 ---
 
-### <a id="ruby-on-rails"></a>Install Tailwind CSS with Ruby on Rails
+### <a id="ruby-on-rails"></a>使用 Ruby on Rails 安装 Tailwind CSS
 
-Setting up Tailwind CSS in Ruby on Rails v8+ project.
+在 Ruby on Rails v8+ 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'R'a'i'l's' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' 't'h'e' '['R'a'i'l's' 'C'o'm'm'a'n'd' 'L'i'n'e']'('h't't'p's':'/'/'g'u'i'd'e's'.'r'u'b'y'o'n'r'a'i'l's'.'o'r'g'/'c'o'm'm'a'n'd'_'l'i'n'e'.'h't'm'l')'.'
 
@@ -1594,9 +1594,9 @@ rails new my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' 't'h'e' '`'t'a'i'l'w'i'n'd'c's's'-'r'a'i'l's'`' 'g'e'm' 't'h'e'n' 'r'u'n' 't'h'e' 'i'n's't'a'l'l' 'c'o'm'm'a'n'd' 't'o' 's'e't' 'u'p' 'T'a'i'l'w'i'n'd' 'C'S'S' 'i'n' 'y'o'u'r' 'p'r'o'j'e'c't'.'
+'安'装'`'t'a'i'l'w'i'n'd'c's's'-'r'a'i'l's'`' 'g'e'm' '，'然'后'运'行'i'n's't'a'l'l'命'令'在'项'目'中'设'置'T'a'i'l'w'i'n'd' 'C'S'S'。'
 
 *Terminal*
 ```shell
@@ -1604,16 +1604,16 @@ bundle add tailwindcss-rails
         ./bin/rails tailwindcss:install
 ```
 
-#### Step 3: Start your build process
+#### 步骤 3: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'.'/'b'i'n'/'d'e'v'`'.'
+'使'用'`'.'/'b'i'n'/'d'e'v'`'运'行'构'建'过'程'。'
 
 *Terminal*
 ```shell
 ./bin/dev
 ```
 
-#### Step 4: Start using Tailwind in your project
+#### 步骤 4: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1628,11 +1628,11 @@ bundle add tailwindcss-rails
 
 ---
 
-### <a id="solidjs"></a>Install Tailwind CSS with SolidJS
+### <a id="solidjs"></a>使用 SolidJS 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a SolidJS project.
+在 SolidJS 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'S'o'l'i'd'J'S' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['t'h'e' 'S'o'l'i'd'J'S' 'V'i't'e' 't'e'm'p'l'a't'e']'('h't't'p's':'/'/'w'w'w'.'s'o'l'i'd'j's'.'c'o'm'/'g'u'i'd'e's'/'g'e't't'i'n'g'-'s't'a'r't'e'd')'.'
 
@@ -1642,18 +1642,18 @@ npx degit solidjs/templates/js my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure Vite Plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'您'的'V'i't'e'配'置'中'。'
 
 *vite.config.ts*
 ```ts
@@ -1677,25 +1677,25 @@ import { defineConfig } from 'vite';
         });
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'s'r'c'/'i'n'd'e'x'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'`'@' 'i'm'p'o'r't'添'加'到'导'入'`'顺'风'C'S'S'的'`'.'/'s'r'c'/'i'n'd'e'x'.'c's's'`'。'
 
 *index.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Start your build process
+#### 步骤 5: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 
@@ -1713,11 +1713,11 @@ export default function App() {
 
 ---
 
-### <a id="sveltekit"></a>Install Tailwind CSS with SvelteKit
+### <a id="sveltekit"></a>使用 SvelteKit 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a SvelteKit project.
+在 SvelteKit 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'S'v'e'l't'e'K'i't' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 'o'u't'l'i'n'e'd' 'i'n' 't'h'e' '['S'v'e'l't'e'K'i't']'('h't't'p's':'/'/'s'v'e'l't'e'.'d'e'v'/'d'o'c's'/'k'i't'/'c'r'e'a't'i'n'g'-'a'-'p'r'o'j'e'c't')' 'd'o'c'u'm'e'n't'a't'i'o'n'.'
 
@@ -1727,18 +1727,18 @@ npx sv create my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure Vite Plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'您'的'V'i't'e'配'置'中'。'
 
 *vite.config.ts*
 ```ts
@@ -1756,18 +1756,18 @@ import { sveltekit } from '@sveltejs/kit/vite';
         });
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'C'r'e'a't'e' 'a' '`'.'/'s'r'c'/'a'p'p'.'c's's'`' 'f'i'l'e' 'a'n'd' 'a'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'创'建'`'.'/'s'r'c'/'a'p'p'.'c's's'`'文'件'并'添'加'导'入'顺'风'C'S'S'的'`'@' 'i'm'p'o'r't'`'。'
 
 *app.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Import the CSS file
+#### 步骤 5: 导入 CSS 文件
 
-'C'r'e'a't'e' 'a' '`'.'/'s'r'c'/'r'o'u't'e's'/'+'l'a'y'o'u't'.'s'v'e'l't'e'`' 'f'i'l'e' 'a'n'd' 'i'm'p'o'r't' 't'h'e' 'n'e'w'l'y'-'c'r'e'a't'e'd' '`'a'p'p'.'c's's'`' 'f'i'l'e'.'
+'创'建'`'.'/'s'r'c'/'r'o'u't'e's'/'+'l'a'y'o'u't'.'s'v'e'l't'e'文'件'并'`'导'入'新'创'建'的'`'a'p'p'.'c's's'`'文'件'。'
 
 *+layout.svelte*
 ```svelte
@@ -1780,16 +1780,16 @@ import { sveltekit } from '@sveltejs/kit/vite';
         {@render children()}
 ```
 
-#### Step 6: Start your build process
+#### 步骤 6: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'd'e'v'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'd'e'v'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run dev
 ```
 
-#### Step 7: Start using Tailwind in your project
+#### 步骤 7: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't',' 'm'a'k'i'n'g' 's'u'r'e' 't'o' 'i'm'p'o'r't' 'y'o'u'r' 'T'a'i'l'w'i'n'd' 'C'S'S' 't'h'e'm'e' 'f'o'r' 'a'n'y' '`'&'l't';'s't'y'l'e'&'g't';'`' 'b'l'o'c'k's' 't'h'a't' 'n'e'e'd' 't'o' 'b'e' 'p'r'o'c'e's's'e'd' 'b'y' 'T'a'i'l'w'i'n'd'.'
 
@@ -1813,11 +1813,11 @@ npm run dev
 
 ---
 
-### <a id="symfony"></a>Install Tailwind CSS with Symfony
+### <a id="symfony"></a>使用 Symfony 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a Symfony project.
+在 Symfony 项目中设置 Tailwind CSS。
 
-#### Step 1: Create your project
+#### 步骤 1: 创建您的项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'S'y'm'f'o'n'y' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['t'h'e' 'S'y'm'f'o'n'y' 'I'n's't'a'l'l'e'r']'('h't't'p's':'/'/'s'y'm'f'o'n'y'.'c'o'm'/'d'o'w'n'l'o'a'd')'.'
 
@@ -1827,9 +1827,9 @@ symfony new --webapp my-project
         cd my-project
 ```
 
-#### Step 2: Install Webpack Encore
+#### 步骤 2: 安装 Webpack Encore
 
-'I'n's't'a'l'l' 'W'e'b'p'a'c'k' 'E'n'c'o'r'e',' 'w'h'i'c'h' 'h'a'n'd'l'e's' 'b'u'i'l'd'i'n'g' 'y'o'u'r' 'a's's'e't's'.' 'S'e'e' '['t'h'e' 'd'o'c'u'm'e'n't'a't'i'o'n']'('h't't'p's':'/'/'s'y'm'f'o'n'y'.'c'o'm'/'d'o'c'/'c'u'r'r'e'n't'/'f'r'o'n't'e'n'd'.'h't'm'l')' 'f'o'r' 'm'o'r'e' 'i'n'f'o'r'm'a't'i'o'n'.'
+'安'装'W'e'b'p'a'c'k' 'E'n'c'o'r'e' '，'它'负'责'构'建'您'的'资'产'。'有'关'更'多'信'['息'，'请'参'阅'文'档']'('h't't'p's':'/'/'s'y'm'f'o'n'y'.'c'o'm'/'d'o'c'/'c'u'r'r'e'n't'/'f'r'o'n't'e'n'd'.'h't'm'l')'。'
 
 *Terminal*
 ```shell
@@ -1837,7 +1837,7 @@ composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
         composer require symfony/webpack-encore-bundle symfony/ux-turbo symfony/stimulus-bundle
 ```
 
-#### Step 3: Install Tailwind CSS
+#### 步骤 3: 安装 Tailwind CSS
 
 'U's'i'n'g' 'n'p'm',' 'i'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's',' 'a's' 'w'e'l'l' 'a's' '`'p'o's't'c's's'-'l'o'a'd'e'r'`'.'
 
@@ -1846,9 +1846,9 @@ composer remove symfony/ux-turbo symfony/asset-mapper symfony/stimulus-bundle
 npm install tailwindcss @tailwindcss/postcss postcss postcss-loader
 ```
 
-#### Step 4: Enable PostCSS support
+#### 步骤 4: 启用 PostCSS 支持
 
-'I'n' 'y'o'u'r' '`'w'e'b'p'a'c'k'.'c'o'n'f'i'g'.'j's'`' 'f'i'l'e',' 'e'n'a'b'l'e' 't'h'e' 'P'o's't'C'S'S' 'L'o'a'd'e'r'.' 'S'e'e' '['t'h'e' 'd'o'c'u'm'e'n't'a't'i'o'n']'('h't't'p's':'/'/'s'y'm'f'o'n'y'.'c'o'm'/'d'o'c'/'c'u'r'r'e'n't'/'f'r'o'n't'e'n'd'/'e'n'c'o'r'e'/'p'o's't'c's's'.'h't'm'l')' 'f'o'r' 'm'o'r'e' 'i'n'f'o'r'm'a't'i'o'n'.'
+'在'`'w'e'b'p'a'c'k'.'c'o'n'f'i'g'.'j's'`'文'件'中'，'启'用'P'o's't'C'S'S'加'载'器'。'有'关'更'多'信'['息'，'请'参'阅'文'档']'('h't't'p's':'/'/'s'y'm'f'o'n'y'.'c'o'm'/'d'o'c'/'c'u'r'r'e'n't'/'f'r'o'n't'e'n'd'/'e'n'c'o'r'e'/'p'o's't'c's's'.'h't'm'l')'。'
 
 *webpack.config.js*
 ```js
@@ -1857,9 +1857,9 @@ Encore
         ;
 ```
 
-#### Step 5: Configure PostCSS Plugins
+#### 步骤 5: 配置 PostCSS 插件
 
-'C'r'e'a't'e' 'a' '`'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'`' 'f'i'l'e' 'i'n' 't'h'e' 'r'o'o't' 'o'f' 'y'o'u'r' 'p'r'o'j'e'c't' 'a'n'd' 'a'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'P'o's't'C'S'S' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'在'项'目'根'`'目'`'录'中'创'建'p'o's't'c's's'.'c'o'n'f'i'g'.'m'j's'文'件'，'并'将'`'@'t'a'i'l'w'i'n'd'c's's'/'p'o's't'c's's'`'插'件'添'加'到'P'o's't'C'S'S'配'置'中'。'
 
 *postcss.config.mjs*
 ```js
@@ -1871,9 +1871,9 @@ export default {
         };
 ```
 
-#### Step 6: Import Tailwind CSS
+#### 步骤 6: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'a's's'e't's'/'s't'y'l'e's'/'a'p'p'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S' 'a'n'd' 'a'n' '`'@'s'o'u'r'c'e'`' 't'h'a't' 'i'g'n'o'r'e's' 't'h'e' 'p'u'b'l'i'c' 'd'i'r' 't'o' 'p'r'e'v'e'n't' 'r'e'c'o'm'p'i'l'e' 'l'o'o'p's' 'i'n' 'w'a't'c'h' 'm'o'd'e'.'
+'向'`'.'/'a's's'e't's'/'s't'y'l'e's'/'a'p'p'.'c's's'`'添'加'导'入'顺'风'C'S'S'的'`'@' 'i'm'p'o'r't'`'和'忽'略'公'共'目'录'以'防'止'在'监'视'模'式'下'重'新'编'译'循'环'的'`'@' 's'o'u'r'c'e'`'。'
 
 *app.css*
 ```css
@@ -1881,26 +1881,26 @@ export default {
         @source not "../../public";
 ```
 
-#### Step 7: Start your build process
+#### 步骤 7: 开始您的构建过程
 
-'R'u'n' 'y'o'u'r' 'b'u'i'l'd' 'p'r'o'c'e's's' 'w'i't'h' '`'n'p'm' 'r'u'n' 'w'a't'c'h'`'.'
+'使'用'`'n'p'm' 'r'u'n' 'w'a't'c'h'运'行'`'构'建'过'程'。'
 
 *Terminal*
 ```shell
 npm run watch
 ```
 
-#### Step 8: Start using Tailwind in your project
+#### 步骤 8: 开始在您的项目中使用 Tailwind
 
-'M'a'k'e' 's'u'r'e' 'y'o'u'r' 'c'o'm'p'i'l'e'd' 'C'S'S' 'i's' 'i'n'c'l'u'd'e'd' 'i'n' 't'h'e' '`'<'h'e'a'd'>'`' 't'h'e'n' 's't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
+'确'保'已'编'译'的'C'S'S'包'含'在'中'，'`'<'h'e'a'd'>'`'然'后'开'始'使'用'T'a'i'l'w'i'n'd'的'实'用'程'序'类'来'设'置'内'容'的'样'式'。'
 
 ---
 
-### <a id="tanstack-start"></a>Install Tailwind CSS with TanStack Start
+### <a id="tanstack-start"></a>使用 TanStack Start 安装 Tailwind CSS
 
-Setting up Tailwind CSS in a TanStack Start project.
+在 TanStack Start 项目中设置 Tailwind CSS。
 
-#### Step 1: Create project
+#### 步骤 1: 创建项目
 
 'S't'a'r't' 'b'y' 'c'r'e'a't'i'n'g' 'a' 'n'e'w' 'T'a'n'S't'a'c'k' 'S't'a'r't' 'p'r'o'j'e'c't' 'i'f' 'y'o'u' 'd'o'n'''t' 'h'a'v'e' 'o'n'e' 's'e't' 'u'p' 'a'l'r'e'a'd'y'.' 'T'h'e' 'm'o's't' 'c'o'm'm'o'n' 'a'p'p'r'o'a'c'h' 'i's' 't'o' 'u's'e' '['C'r'e'a't'e' 'S't'a'r't' 'A'p'p']'('h't't'p's':'/'/'t'a'n's't'a'c'k'.'c'o'm'/'s't'a'r't'/'l'a't'e's't'/'d'o'c's'/'f'r'a'm'e'w'o'r'k'/'r'e'a'c't'/'o'v'e'r'v'i'e'w')'.'
 
@@ -1910,18 +1910,18 @@ npx create-start-app@latest my-project
         cd my-project
 ```
 
-#### Step 2: Install Tailwind CSS
+#### 步骤 2: 安装 Tailwind CSS
 
-'I'n's't'a'l'l' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'a'n'd' 'i't's' 'p'e'e'r' 'd'e'p'e'n'd'e'n'c'i'e's' 'v'i'a' 'n'p'm'.'
+'通'过'n'p'm'`'安'装'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'及'其'对'等'依'赖'。'
 
 *Terminal*
 ```shell
 npm install tailwindcss @tailwindcss/vite
 ```
 
-#### Step 3: Configure Vite Plugin
+#### 步骤 3: 配置Vite插件
 
-'A'd'd' 't'h'e' '`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`' 'p'l'u'g'i'n' 't'o' 'y'o'u'r' 'V'i't'e' 'c'o'n'f'i'g'u'r'a't'i'o'n'.'
+'将'`'@'t'a'i'l'w'i'n'd'c's's'/'v'i't'e'`'插'件'添'加'到'您'的'V'i't'e'配'置'中'。'
 
 *vite.config.ts*
 ```ts
@@ -1941,18 +1941,18 @@ import { tanstackStart } from '@tanstack/react-start/plugin/vite';
         });
 ```
 
-#### Step 4: Import Tailwind CSS
+#### 步骤 4: 导入 Tailwind CSS
 
-'A'd'd' 'a'n' '`'@'i'm'p'o'r't'`' 't'o' '`'.'/'s'r'c'/'s't'y'l'e's'.'c's's'`' 't'h'a't' 'i'm'p'o'r't's' 'T'a'i'l'w'i'n'd' 'C'S'S'.'
+'将'导'入'顺'风'C'S'S'的'`'@' 'i'm'p'o'r't'`'添'加'到'`'.'/'s'r'c'/'s't'y'l'e's'.'c's's'`'。'
 
 *src/styles.css*
 ```css
 @import "tailwindcss";
 ```
 
-#### Step 5: Import the CSS file in your root route
+#### 步骤 5: 在根路由中导入 CSS 文件
 
-'I'm'p'o'r't' 't'h'e' 'C'S'S' 'f'i'l'e' 'i'n' 'y'o'u'r' '`'_'_'r'o'o't'.'t's'x'`' 'f'i'l'e' 'w'i't'h' 't'h'e' '`'?'u'r'l'`' 'q'u'e'r'y'.'
+'使'用'`'?' 'u'r'l'`'查'询'将'`'C'S'S'`'文'件'导'入'_'_'r'o'o't'.'t's'x'文'件'中'。'
 
 *src/routes/__root.tsx*
 ```tsx
@@ -1974,7 +1974,7 @@ import { tanstackStart } from '@tanstack/react-start/plugin/vite';
         })
 ```
 
-#### Step 6: Start using Tailwind in your project
+#### 步骤 6: 开始在您的项目中使用 Tailwind
 
 'S't'a'r't' 'u's'i'n'g' 'T'a'i'l'w'i'n'd'''s' 'u't'i'l'i't'y' 'c'l'a's's'e's' 't'o' 's't'y'l'e' 'y'o'u'r' 'c'o'n't'e'n't'.'
 

@@ -6,7 +6,7 @@ import re
 os.makedirs("assets", exist_ok=True)
 
 # Load parsed JSON
-with open("raw_data/parsed_docs.json", "r", encoding="utf-8") as f:
+with open("raw_data/parsed_docs_zh.json", "r", encoding="utf-8") as f:
     docs = json.load(f)
 
 # Framework icon mapping (SVG paths and colors)
@@ -879,13 +879,13 @@ def generate_header():
       <a href="tailwind-cli.html" class="logo-link">
         <svg viewBox="0 0 167 21" fill="none" class="logo-svg" style="width: 120px;"><path class="fill-sky-400" d="M17.183 0C12.6 0 9.737 2.291 8.59 6.873c1.719-2.29 3.723-3.15 6.014-2.577 1.307.326 2.242 1.274 3.275 2.324 1.685 1.71 3.635 3.689 7.894 3.689 4.582 0 7.445-2.291 8.591-6.872-1.718 2.29-3.723 3.15-6.013 2.576-1.308-.326-2.243-1.274-3.276-2.324C23.39 1.98 21.44 0 17.183 0ZM8.59 10.309C4.01 10.309 1.145 12.6 0 17.182c1.718-2.291 3.723-3.15 6.013-2.577 1.308.326 2.243 1.274 3.276 2.324 1.685 1.71 3.635 3.689 7.894 3.689 4.582 0 7.445-2.29 8.59-6.872-1.718 2.29-3.722 3.15-6.013 2.577-1.307-.327-2.242-1.276-3.276-2.325-1.684-1.71-3.634-3.689-7.893-3.689Z" fill="#38bdf8"></path></svg>
       </a>
-      <span class="version-badge">v4.0</span>
+      <span class="version-badge">v4.3</span>
     </div>
     <div class="header-right">
       <nav class="header-nav">
-        <a href="tailwind-cli.html">Docs</a>
-        <a href="https://tailwindcss.com/blog" target="_blank">Blog</a>
-        <a href="https://tailwindcss.com/showcase" target="_blank">Showcase</a>
+        <a href="tailwind-cli.html">文档</a>
+        <a href="https://tailwindcss.com/blog" target="_blank">博客</a>
+        <a href="https://tailwindcss.com/showcase" target="_blank">案例展示</a>
       </nav>
       <button class="icon-btn" id="theme-toggle" aria-label="Toggle Theme">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
@@ -1099,25 +1099,25 @@ print("Generated framework-guides.html")
 # ----------------- Generate tailwind_docs.md -----------------
 print("Generating tailwind_docs.md...")
 
-md_out = """# Tailwind CSS v4.0 Installation Guides (Scope A)
+md_out = """# Tailwind CSS v4.3 安装指南 (Scope A)
 
-This document contains a consolidated collection of all Tailwind CSS installation guides and framework setup instructions compiled directly from the official documentation.
+此文档包含从官方文档直接编译的所有 Tailwind CSS 安装指南和框架设置说明的合并集合。
 
-## Table of Contents
+## 目录
 
-- [General Guides](#general-guides)
+- [常规指南](#常规指南)
   - [Tailwind CLI](#tailwind-cli)
   - [Using PostCSS](#using-postcss)
   - [Using Vite](#using-vite)
   - [Play CDN](#play-cdn)
-- [Framework-Specific Guides](#framework-specific-guides)
+- [框架特定指南](#框架特定指南)
 """
 
 for slug in sorted(docs["frameworks"].keys()):
     tile_title = docs["frameworks"][slug]["tile"]["title"] if docs["frameworks"][slug]["tile"] else slug.capitalize()
     md_out += f"  - [{tile_title}](#{slug})\n"
 
-md_out += "\n---\n\n## General Guides\n\n"
+md_out += "\n---\n\n## <a id=\"常规指南\"></a>常规指南\n\n"
 
 # Render General guides in markdown
 for page in ["tailwind-cli", "using-postcss", "using-vite", "play-cdn"]:
@@ -1126,7 +1126,7 @@ for page in ["tailwind-cli", "using-postcss", "using-vite", "play-cdn"]:
     md_out += f"{data['description']}\n\n"
     
     for idx, step in enumerate(data["steps"]):
-        md_out += f"#### Step {idx+1}: {step['title']}\n\n"
+        md_out += f"#### 步骤 {idx+1}: {step['title']}\n\n"
         # Convert simple html in body to clean markdown
         body_md = step["body"].replace("<p>", "").replace("</p>", "").strip()
         body_md = re.sub(r'<code>(.*?)</code>', r'`\1`', body_md)
@@ -1140,7 +1140,7 @@ for page in ["tailwind-cli", "using-postcss", "using-vite", "play-cdn"]:
             md_out += f"```{code['lang']}\n{code['code']}\n```\n\n"
     md_out += "---\n\n"
 
-md_out += "## Framework-Specific Guides\n\n"
+md_out += "## <a id=\"框架特定指南\"></a>框架特定指南\n\n"
 
 # Render Framework guides in markdown
 for page in sorted(docs["frameworks"].keys()):
@@ -1149,7 +1149,7 @@ for page in sorted(docs["frameworks"].keys()):
     md_out += f"{data['description']}\n\n"
     
     for idx, step in enumerate(data["steps"]):
-        md_out += f"#### Step {idx+1}: {step['title']}\n\n"
+        md_out += f"#### 步骤 {idx+1}: {step['title']}\n\n"
         body_md = step["body"].replace("<p>", "").replace("</p>", "").strip()
         body_md = re.sub(r'<code>(.*?)</code>', r'`\1`', body_md)
         body_md = re.sub(r'<a href="([^"]*)">(.*?)</a>', r'[\2](\1)', body_md)
