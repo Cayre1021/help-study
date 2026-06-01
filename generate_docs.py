@@ -12,36 +12,36 @@ with open("raw_data/parsed_docs_zh.json", "r", encoding="utf-8") as f:
 # Framework icon mapping (SVG paths and colors)
 # We will define inline SVGs for frameworks to make it look premium
 svg_icons = {
-    "nextjs": '<svg class="w-8 h-8" viewBox="0 0 180 180" fill="currentColor"><path d="M145.47 160.28c-1.3-.9-2.73-1.63-4.14-2.48l-68.51-87.97V139.3h-12.63V52.88h11.23l66.97 86.42V52.88h12.63v107.4a33.56 33.56 0 0 1-5.55 0Zm-55.47 9.72c-49.63 0-90-40.37-90-90s40.37-90 90-90 90 40.37 90 90c0 19.34-6.11 37.26-16.53 51.98l-10.4-13.38A77.06 77.06 0 0 0 167.37 90c0-42.66-34.71-77.37-77.37-77.37S12.63 47.34 12.63 90s34.71 77.37 77.37 77.37c15.22 0 29.35-4.4 41.34-11.96l10.41 13.38A89.65 89.65 0 0 1 90 170Z"/></svg>',
-    "laravel": '<svg class="w-8 h-8 text-red-600" viewBox="0 0 24 24" fill="currentColor"><path d="M20.354 4.542l-5.698-3.284a1.365 1.365 0 0 0-1.363 0l-5.699 3.284a1.365 1.365 0 0 0-.682 1.182v6.57l-1.342.775V6.505c0-.493-.264-.95-.694-1.198L3.218 4.303a1.397 1.397 0 0 0-1.398 0c-.43.248-.694.705-.694 1.198v9.988c0 .493.264.95.694 1.198l5.658 3.262a1.397 1.397 0 0 0 1.398 0l5.658-3.262c.43-.248.694-.705.694-1.198v-6.57l1.342-.775v6.565c0 .493.264.95.694 1.198l1.658.958a1.397 1.397 0 0 0 1.398 0l5.658-3.262c.43-.248.694-.705.694-1.198V5.724a1.365 1.365 0 0 0-.682-1.182zM4.17 14.887V7.121l4.288 2.472v7.766L4.17 14.887zm11.233-1.63V5.491l4.288 2.472v7.766L15.403 13.257z"/></svg>',
-    "nuxtjs": '<svg class="w-8 h-8 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 19.5h-21l10.5-16.5 10.5 16.5zm-15.545-2.25h10.09L12 9.409 6.955 17.25zM12 11.25l1.682 2.62h-3.364L12 11.25z"/></svg>',
-    "solidjs": '<svg class="w-8 h-8 text-sky-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm3.89 12.3L12.3 17.89a.43.43 0 0 1-.6 0L8.11 14.3a.43.43 0 0 1 0-.6l3.59-3.59a.43.43 0 0 1 .6 0l3.59 3.59c.17.17.17.44 0 .6z"/></svg>',
-    "sveltekit": '<svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.85 14.15c-.2.2-.51.2-.71 0l-3.29-3.29V8.5a.5.5 0 0 0-1 0v4.71l-1.65-1.65a.5.5 0 0 0-.71.71l2 2c.2.2.51.2.71 0l4-4a.5.5 0 0 0-.71-.71l-3.64 3.64z"/></svg>',
-    "gatsby": '<svg class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.89.66-3.63 1.77-5.02l11.25 11.25c-1.39 1.11-3.13 1.77-5.02 1.77zm6.23-2.98L7.02 5.77C8.41 4.66 10.15 4 12 4c4.41 0 8 3.59 8 8 0 1.89-.66 3.63-1.77 5.02z"/></svg>',
-    "angular": '<svg class="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 5.5l1.5 13.5L12 22l8.5-3L22 5.5zM12 4.6l6.8 2.4-1.1 9.4L12 18.8l-5.7-2.4-1.1-9.4zM12 6.5L7.7 15.5h2.1l1-2.4h2.4l1 2.4h2.1zm-1.1 5.3l1.1-2.6 1.1 2.6z"/></svg>',
-    "ruby-on-rails": '<svg class="w-8 h-8 text-red-700" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-4H9v-2h2v-2h2v2h2v2h-2z"/></svg>',
-    "react-router": '<svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 10.9 12 11.5 12 13h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>',
-    "tanstack-start": '<svg class="w-8 h-8 text-teal-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8h3v-2H4c0-4.41 3.59-8 8-8s8 3.59 8 8h-3v2h3c0 4.41-3.59 8-8 8z"/></svg>',
-    "phoenix": '<svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5zm0 10.5L3.5 8v6.5l8.5 4.5 8.5-4.5V8z"/></svg>',
-    "parcel": '<svg class="w-8 h-8 text-amber-700" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2L2.5 7.7v8.6l9.5 5.5 9.5-5.5V7.7zm0 2.4l7.1 4.1-7.1 4.1-7.1-4.1zM4.5 9.6l6.5 3.8v6.7l-6.5-3.8zm15 3.8l-6.5 3.8v-6.7l6.5-3.8z"/></svg>',
-    "symfony": '<svg class="w-8 h-8 text-black dark:text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.93 13.07a4.04 4.04 0 0 1-5.86 0 4.2 4.2 0 0 1 0-5.86 4.04 4.04 0 0 1 5.86 0c.39.4.58.9.58 1.43s-.2 1.03-.58 1.43z"/></svg>',
-    "meteor": '<svg class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm1.25 15h-2.5v-2h2.5zm1.5-3.5h-5.5V11h5.5z"/></svg>',
-    "adonisjs": '<svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5zm-1 15.5l-6.5-3.5V9l6.5 3.5zm2 0V12.5l6.5-3.5v5z"/></svg>',
-    "emberjs": '<svg class="w-8 h-8 text-rose-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.89 14.3L12.3 17.89a.43.43 0 0 1-.6 0L8.11 14.3a.43.43 0 0 1 0-.6l3.59-3.59a.43.43 0 0 1 .6 0l3.59 3.59c.17.17.17.44 0 .6z"/></svg>',
-    "astro": '<svg class="w-8 h-8 text-rose-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12l10 10 10-10L12 2zm0 3.8l6.2 6.2-6.2 6.2L5.8 12 12 5.8z"/></svg>',
-    "qwik": '<svg class="w-8 h-8 text-sky-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.89.66-3.63 1.77-5.02L17.02 17C15.63 18.11 13.89 18.8 12 18.8z"/></svg>',
-    "rspack": '<svg class="w-8 h-8 text-sky-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 14v-4H8v-2h2.5V7.5h2v2.5H15v2h-2.5V16h-2z"/></svg>',
+    "nextjs": '<svg width="32" height="32" class="w-8 h-8" viewBox="0 0 180 180" fill="currentColor"><path d="M145.47 160.28c-1.3-.9-2.73-1.63-4.14-2.48l-68.51-87.97V139.3h-12.63V52.88h11.23l66.97 86.42V52.88h12.63v107.4a33.56 33.56 0 0 1-5.55 0Zm-55.47 9.72c-49.63 0-90-40.37-90-90s40.37-90 90-90 90 40.37 90 90c0 19.34-6.11 37.26-16.53 51.98l-10.4-13.38A77.06 77.06 0 0 0 167.37 90c0-42.66-34.71-77.37-77.37-77.37S12.63 47.34 12.63 90s34.71 77.37 77.37 77.37c15.22 0 29.35-4.4 41.34-11.96l10.41 13.38A89.65 89.65 0 0 1 90 170Z"/></svg>',
+    "laravel": '<svg width="32" height="32" class="w-8 h-8 text-red-600" viewBox="0 0 24 24" fill="currentColor"><path d="M20.354 4.542l-5.698-3.284a1.365 1.365 0 0 0-1.363 0l-5.699 3.284a1.365 1.365 0 0 0-.682 1.182v6.57l-1.342.775V6.505c0-.493-.264-.95-.694-1.198L3.218 4.303a1.397 1.397 0 0 0-1.398 0c-.43.248-.694.705-.694 1.198v9.988c0 .493.264.95.694 1.198l5.658 3.262a1.397 1.397 0 0 0 1.398 0l5.658-3.262c.43-.248.694-.705.694-1.198v-6.57l1.342-.775v6.565c0 .493.264.95.694 1.198l1.658.958a1.397 1.397 0 0 0 1.398 0l5.658-3.262c.43-.248.694-.705.694-1.198V5.724a1.365 1.365 0 0 0-.682-1.182zM4.17 14.887V7.121l4.288 2.472v7.766L4.17 14.887zm11.233-1.63V5.491l4.288 2.472v7.766L15.403 13.257z"/></svg>',
+    "nuxtjs": '<svg width="32" height="32" class="w-8 h-8 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 19.5h-21l10.5-16.5 10.5 16.5zm-15.545-2.25h10.09L12 9.409 6.955 17.25zM12 11.25l1.682 2.62h-3.364L12 11.25z"/></svg>',
+    "solidjs": '<svg width="32" height="32" class="w-8 h-8 text-sky-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm3.89 12.3L12.3 17.89a.43.43 0 0 1-.6 0L8.11 14.3a.43.43 0 0 1 0-.6l3.59-3.59a.43.43 0 0 1 .6 0l3.59 3.59c.17.17.17.44 0 .6z"/></svg>',
+    "sveltekit": '<svg width="32" height="32" class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.85 14.15c-.2.2-.51.2-.71 0l-3.29-3.29V8.5a.5.5 0 0 0-1 0v4.71l-1.65-1.65a.5.5 0 0 0-.71.71l2 2c.2.2.51.2.71 0l4-4a.5.5 0 0 0-.71-.71l-3.64 3.64z"/></svg>',
+    "gatsby": '<svg width="32" height="32" class="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.89.66-3.63 1.77-5.02l11.25 11.25c-1.39 1.11-3.13 1.77-5.02 1.77zm6.23-2.98L7.02 5.77C8.41 4.66 10.15 4 12 4c4.41 0 8 3.59 8 8 0 1.89-.66 3.63-1.77 5.02z"/></svg>',
+    "angular": '<svg width="32" height="32" class="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 5.5l1.5 13.5L12 22l8.5-3L22 5.5zM12 4.6l6.8 2.4-1.1 9.4L12 18.8l-5.7-2.4-1.1-9.4zM12 6.5L7.7 15.5h2.1l1-2.4h2.4l1 2.4h2.1zm-1.1 5.3l1.1-2.6 1.1 2.6z"/></svg>',
+    "ruby-on-rails": '<svg width="32" height="32" class="w-8 h-8 text-red-700" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-4H9v-2h2v-2h2v2h2v2h-2z"/></svg>',
+    "react-router": '<svg width="32" height="32" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm1.07-7.75l-.9.92C12.45 10.9 12 11.5 12 13h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>',
+    "tanstack-start": '<svg width="32" height="32" class="w-8 h-8 text-teal-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8h3v-2H4c0-4.41 3.59-8 8-8s8 3.59 8 8h-3v2h3c0 4.41-3.59 8-8 8z"/></svg>',
+    "phoenix": '<svg width="32" height="32" class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5zm0 10.5L3.5 8v6.5l8.5 4.5 8.5-4.5V8z"/></svg>',
+    "parcel": '<svg width="32" height="32" class="w-8 h-8 text-amber-700" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2L2.5 7.7v8.6l9.5 5.5 9.5-5.5V7.7zm0 2.4l7.1 4.1-7.1 4.1-7.1-4.1zM4.5 9.6l6.5 3.8v6.7l-6.5-3.8zm15 3.8l-6.5 3.8v-6.7l6.5-3.8z"/></svg>',
+    "symfony": '<svg width="32" height="32" class="w-8 h-8 text-black dark:text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm2.93 13.07a4.04 4.04 0 0 1-5.86 0 4.2 4.2 0 0 1 0-5.86 4.04 4.04 0 0 1 5.86 0c.39.4.58.9.58 1.43s-.2 1.03-.58 1.43z"/></svg>',
+    "meteor": '<svg width="32" height="32" class="w-8 h-8 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm1.25 15h-2.5v-2h2.5zm1.5-3.5h-5.5V11h5.5z"/></svg>',
+    "adonisjs": '<svg width="32" height="32" class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5zm-1 15.5l-6.5-3.5V9l6.5 3.5zm2 0V12.5l6.5-3.5v5z"/></svg>',
+    "emberjs": '<svg width="32" height="32" class="w-8 h-8 text-rose-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.89 14.3L12.3 17.89a.43.43 0 0 1-.6 0L8.11 14.3a.43.43 0 0 1 0-.6l3.59-3.59a.43.43 0 0 1 .6 0l3.59 3.59c.17.17.17.44 0 .6z"/></svg>',
+    "astro": '<svg width="32" height="32" class="w-8 h-8 text-rose-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 12l10 10 10-10L12 2zm0 3.8l6.2 6.2-6.2 6.2L5.8 12 12 5.8z"/></svg>',
+    "qwik": '<svg width="32" height="32" class="w-8 h-8 text-sky-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-1.89.66-3.63 1.77-5.02L17.02 17C15.63 18.11 13.89 18.8 12 18.8z"/></svg>',
+    "rspack": '<svg width="32" height="32" class="w-8 h-8 text-sky-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 14v-4H8v-2h2.5V7.5h2v2.5H15v2h-2.5V16h-2z"/></svg>',
     
     # Tabs icons
-    "tailwind-cli": '<svg class="w-6 h-6 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>',
-    "using-postcss": '<svg class="w-6 h-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>',
-    "using-vite": '<svg class="w-6 h-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
-    "play-cdn": '<svg class="w-6 h-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
-    "framework-guides": '<svg class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>'
+    "tailwind-cli": '<svg width="24" height="24" class="w-6 h-6 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>',
+    "using-postcss": '<svg width="24" height="24" class="w-6 h-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>',
+    "using-vite": '<svg width="24" height="24" class="w-6 h-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
+    "play-cdn": '<svg width="24" height="24" class="w-6 h-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+    "framework-guides": '<svg width="24" height="24" class="w-6 h-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>'
 }
 
 def get_icon(key):
-    return svg_icons.get(key, '<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="4"/></svg>')
+    return svg_icons.get(key, '<svg width="32" height="32" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="4"/></svg>')
 
 # ----------------- Step Code Tab Switching Translator -----------------
 def translate_command(cmd, target_pm):
@@ -850,6 +850,76 @@ body.pm-bun .code-block-npm, body.pm-bun .code-block-yarn, body.pm-bun .code-blo
 .text-rose-500 { color: #f43f5e !important; }
 .text-indigo-500 { color: #6366f1 !important; }
 .text-indigo-600 { color: #4f46e5 !important; }
+
+/* Bottom page navigation links */
+.page-nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-color);
+}
+
+.page-nav-link {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-decoration: none;
+  background-color: var(--bg-secondary);
+  transition: all 0.2s;
+  max-width: 48%;
+}
+
+.page-nav-link.prev {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.page-nav-link.next {
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+}
+
+.page-nav-link:hover {
+  border-color: var(--brand-color);
+  background-color: var(--bg-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.nav-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.nav-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+html.dark .nav-title {
+  color: var(--brand-color);
+}
+
+@media (max-width: 640px) {
+  .page-nav-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 48px;
+  }
+  .page-nav-link {
+    max-width: 100%;
+  }
+}
 """
 
 with open("assets/index.css", "w", encoding="utf-8") as f:
@@ -859,31 +929,56 @@ with open("assets/index.css", "w", encoding="utf-8") as f:
 js_content = """// Premium Javascript for responsive UI and client-side logic
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Safe localStorage helper for file:// protocol and restricted environments
+  const safeStorage = {
+    getItem(key) {
+      try {
+        return localStorage.getItem(key);
+      } catch (e) {
+        console.warn('localStorage access denied:', e);
+        return null;
+      }
+    },
+    setItem(key, value) {
+      try {
+        localStorage.setItem(key, value);
+      } catch (e) {
+        console.warn('localStorage write denied:', e);
+      }
+    }
+  };
+
   // 1. Dark Mode Toggle
   const themeToggleBtn = document.getElementById('theme-toggle');
   
   function applyTheme(theme) {
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
-      themeToggleBtn.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>`;
+      if (themeToggleBtn) {
+        themeToggleBtn.innerHTML = `<svg width="20" height="20" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>`;
+      }
     } else {
       document.documentElement.classList.remove('dark');
-      themeToggleBtn.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>`;
+      if (themeToggleBtn) {
+        themeToggleBtn.innerHTML = `<svg width="20" height="20" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>`;
+      }
     }
   }
 
-  // Load saved theme
-  let savedTheme = localStorage.getItem('currentTheme') || 'light';
+  // Load saved theme safely
+  let savedTheme = safeStorage.getItem('currentTheme') || 'light';
   applyTheme(savedTheme);
 
-  themeToggleBtn.addEventListener('click', () => {
-    savedTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-    localStorage.setItem('currentTheme', savedTheme);
-    applyTheme(savedTheme);
-  });
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      savedTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+      safeStorage.setItem('currentTheme', savedTheme);
+      applyTheme(savedTheme);
+    });
+  }
 
   // 2. Package Manager switcher logic
-  const packageManager = localStorage.getItem('packageManager') || 'npm';
+  const packageManager = safeStorage.getItem('packageManager') || 'npm';
   document.body.className = `pm-${packageManager}`;
   
   // Set all tab buttons active matching active package manager
@@ -892,7 +987,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.switchPackageManager = function(pm) {
-    localStorage.setItem('packageManager', pm);
+    safeStorage.setItem('packageManager', pm);
     document.body.className = `pm-${pm}`;
     
     // De-activate all tabs and active the clicked one on all step codeblocks
@@ -940,9 +1035,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (codeBlock) {
       const textToCopy = codeBlock.innerText;
       navigator.clipboard.writeText(textToCopy).then(() => {
-        btn.innerHTML = `<svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>`;
+        btn.innerHTML = `<svg width="16" height="16" class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>`;
         setTimeout(() => {
-          btn.innerHTML = `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>`;
+          btn.innerHTML = `<svg width="16" height="16" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>`;
         }, 2000);
       });
     }
@@ -997,10 +1092,10 @@ def generate_header():
     return """<header>
     <div class="header-left">
       <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg width="24" height="24" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
       <a href="tailwind-cli.html" class="logo-link">
-        <svg viewBox="0 0 167 21" fill="none" class="logo-svg" style="width: 120px;"><path class="fill-sky-400" d="M17.183 0C12.6 0 9.737 2.291 8.59 6.873c1.719-2.29 3.723-3.15 6.014-2.577 1.307.326 2.242 1.274 3.275 2.324 1.685 1.71 3.635 3.689 7.894 3.689 4.582 0 7.445-2.291 8.591-6.872-1.718 2.29-3.723 3.15-6.013 2.576-1.308-.326-2.243-1.274-3.276-2.324C23.39 1.98 21.44 0 17.183 0ZM8.59 10.309C4.01 10.309 1.145 12.6 0 17.182c1.718-2.291 3.723-3.15 6.013-2.577 1.308.326 2.243 1.274 3.276 2.324 1.685 1.71 3.635 3.689 7.894 3.689 4.582 0 7.445-2.29 8.59-6.872-1.718 2.29-3.722 3.15-6.013 2.577-1.307-.327-2.242-1.276-3.276-2.325-1.684-1.71-3.634-3.689-7.893-3.689Z" fill="#38bdf8"></path></svg>
+        <svg width="120" height="15" viewBox="0 0 167 21" fill="none" class="logo-svg" style="width: 120px;"><path class="fill-sky-400" d="M17.183 0C12.6 0 9.737 2.291 8.59 6.873c1.719-2.29 3.723-3.15 6.014-2.577 1.307.326 2.242 1.274 3.275 2.324 1.685 1.71 3.635 3.689 7.894 3.689 4.582 0 7.445-2.291 8.591-6.872-1.718 2.29-3.723 3.15-6.013 2.576-1.308-.326-2.243-1.274-3.276-2.324C23.39 1.98 21.44 0 17.183 0ZM8.59 10.309C4.01 10.309 1.145 12.6 0 17.182c1.718-2.291 3.723-3.15 6.013-2.577 1.308.326 2.243 1.274 3.276 2.324 1.685 1.71 3.635 3.689 7.894 3.689 4.582 0 7.445-2.29 8.59-6.872-1.718 2.29-3.722 3.15-6.013 2.577-1.307-.327-2.242-1.276-3.276-2.325-1.684-1.71-3.634-3.689-7.893-3.689Z" fill="#38bdf8"></path></svg>
       </a>
       <span class="version-badge">v4.3</span>
     </div>
@@ -1011,10 +1106,10 @@ def generate_header():
         <a href="https://tailwindcss.com/showcase" target="_blank">案例展示</a>
       </nav>
       <button class="icon-btn" id="theme-toggle" aria-label="Toggle Theme">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        <svg width="20" height="20" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
       </button>
       <a href="https://github.com/Cayre1021/help-study" target="_blank" class="icon-btn" aria-label="GitHub Repo">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.2 20 14.44 20 10.017 20 4.484 15.522 0 10 0z"/></svg>
+        <svg width="20" height="20" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.2 20 14.44 20 10.017 20 4.484 15.522 0 10 0z"/></svg>
       </a>
     </div>
   </header>"""
@@ -1062,7 +1157,7 @@ def build_code_block(code_name, code_lang, code_text):
             html += f'<button class="code-tab-btn code-tab-btn-{pm} tab-btn-{pm}" onclick="switchPackageManager(\'{pm}\')">{pm}</button>'
         html += '</div>'
         
-    html += f'<button class="copy-btn" onclick="copyCode(this)" aria-label="Copy code"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg></button>'
+    html += f'<button class="copy-btn" onclick="copyCode(this)" aria-label="Copy code"><svg width="16" height="16" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg></button>'
     html += '</div>' # End code-header
     
     # If is terminal, output 4 blocks (one for each package manager), shown/hidden via CSS
@@ -1077,6 +1172,65 @@ def build_code_block(code_name, code_lang, code_text):
         
     html += '</div>' # End code-container
     return html
+
+def generate_page_nav(slug):
+    getting_started = [
+        ("tailwind-cli", "Tailwind CLI"),
+        ("using-postcss", "Using PostCSS"),
+        ("using-vite", "Using Vite"),
+        ("play-cdn", "Play CDN")
+    ]
+    gs_slugs = [item[0] for item in getting_started]
+    
+    prev_link = None
+    next_link = None
+    
+    if slug in gs_slugs:
+        idx = gs_slugs.index(slug)
+        if idx > 0:
+            prev_link = (f"{gs_slugs[idx-1]}.html", getting_started[idx-1][1])
+        if idx < len(getting_started) - 1:
+            next_link = (f"{gs_slugs[idx+1]}.html", getting_started[idx+1][1])
+        else:
+            next_link = ("framework-guides.html", "Framework Guides")
+            
+    elif slug == "framework-guides":
+        prev_link = ("play-cdn.html", "Play CDN")
+        frameworks = sorted(list(docs["frameworks"].keys()))
+        if frameworks:
+            f_slug = frameworks[0]
+            f_title = docs["frameworks"][f_slug]["tile"]["title"] if docs["frameworks"][f_slug]["tile"] else f_slug.capitalize()
+            next_link = (f"{f_slug}.html", f_title)
+            
+    elif slug in docs["frameworks"]:
+        frameworks = sorted(list(docs["frameworks"].keys()))
+        idx = frameworks.index(slug)
+        if idx > 0:
+            f_slug = frameworks[idx-1]
+            f_title = docs["frameworks"][f_slug]["tile"]["title"] if docs["frameworks"][f_slug]["tile"] else f_slug.capitalize()
+            prev_link = (f"{f_slug}.html", f_title)
+        else:
+            prev_link = ("framework-guides.html", "Framework Guides")
+            
+        if idx < len(frameworks) - 1:
+            f_slug = frameworks[idx+1]
+            f_title = docs["frameworks"][f_slug]["tile"]["title"] if docs["frameworks"][f_slug]["tile"] else f_slug.capitalize()
+            next_link = (f"{f_slug}.html", f_title)
+        else:
+            next_link = ("framework-guides.html", "Framework Guides")
+            
+    if not prev_link and not next_link:
+        return ""
+        
+    nav_html = '<div class="page-nav-links">'
+    if prev_link:
+        url, title = prev_link
+        nav_html += f'<a href="{url}" class="page-nav-link prev"><span class="nav-label">← 上一篇</span><span class="nav-title">{title}</span></a>'
+    if next_link:
+        url, title = next_link
+        nav_html += f'<a href="{url}" class="page-nav-link next"><span class="nav-label">下一篇 →</span><span class="nav-title">{title}</span></a>'
+    nav_html += '</div>'
+    return nav_html
 
 def build_guide_html(slug, data):
     title = data["title"]
@@ -1126,13 +1280,13 @@ def build_guide_html(slug, data):
           </section>
         """
         
-    html += """
+    html += f"""
         </div>
+        {generate_page_nav(slug)}
       </article>
     </main>
   </div>
 </body>
-</html>
     """
     return html
 
@@ -1207,8 +1361,9 @@ for slug, data in sorted(docs["frameworks"].items()):
           </a>
     """
 
-hub_html += """
+hub_html += f"""
         </div>
+        {generate_page_nav("framework-guides")}
       </article>
     </main>
   </div>
